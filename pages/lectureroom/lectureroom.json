@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "名师大讲堂",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "bottom-loading": "pages\\lectureroom\\components\\bottomLoading\\bottomLoading",
+    "center-loading": "pages\\lectureroom\\components\\centerLoading\\centerLoading",
+    "fixed-box": "pages\\lectureroom\\components\\fixedBox\\fixedBox"
+  }
+}

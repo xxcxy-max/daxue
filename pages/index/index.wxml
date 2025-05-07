@@ -1,0 +1,37 @@
+<view class="data-v-57280228">
+    <view class="top data-v-57280228">
+        <uni-nav-bar bind:__l="__l" border="{{false}}" class="data-v-57280228" leftWidth="180rpx" rightWidth="180rpx" statusBar="{{true}}" title="大学生求职神器" vueId="8dd740cc-1" vueSlots="{{['left']}}">
+            <view class="data-v-57280228" slot="left">
+                <view bindtap="__e" class="topInfoBtn data-v-57280228" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/search/index'] ] ] ] ]}}">
+                    <image class="topInfoBtnIcon _img data-v-57280228" src="{{$root.m0}}"></image>搜索</view>
+            </view>
+        </uni-nav-bar>
+        <view class="topNav data-v-57280228">
+            <view bindtap="__e" class="{{['navItem','data-v-57280228',index==tabIndex?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'tabEvent',[index] ] ] ] ]}}" wx:for="{{tabsList}}" wx:key="index">{{''+item+''}}</view>
+        </view>
+    </view>
+    <view class="data-v-57280228" style="{{'height:'+'calc(100vh - '+topHeight+'px)'+';'}}" wx:if="{{topHeight&&jobCount}}">
+        <swiper autoplay="{{false}}" bindchange="__e" class="navSwiper data-v-57280228" current="{{tabIndex}}" data-event-opts="{{[ [ 'change',[ [ 'swiperChange',['$event'] ] ] ] ]}}" duration="{{500}}" indicatorDots="{{false}}">
+            <swiper-item class="data-v-57280228">
+                <intelligence bind:__l="__l" class="data-v-57280228" jobCount="{{jobCount}}" jobCount24h="{{jobCount24h}}" jobCount7d="{{jobCount7d}}" vueId="8dd740cc-2"></intelligence>
+            </swiper-item>
+            <swiper-item class="data-v-57280228">
+                <recommend bind:__l="__l" bind:tab="__e" class="recommend data-v-57280228" data-event-opts="{{[ [ '^tab',[ ['switchEvent'] ] ] ]}}" jobCount="{{jobCount}}" vueId="8dd740cc-3"></recommend>
+            </swiper-item>
+            <swiper-item class="data-v-57280228">
+                <course bind:__l="__l" class="data-v-57280228" vueId="8dd740cc-4"></course>
+            </swiper-item>
+            <swiper-item class="data-v-57280228">
+                <subject bind:__l="__l" class="data-v-57280228" vueId="8dd740cc-5"></subject>
+            </swiper-item>
+            <swiper-item class="data-v-57280228">
+                <assess bind:__l="__l" class="data-v-57280228" vueId="8dd740cc-6"></assess>
+            </swiper-item>
+            <swiper-item class="data-v-57280228">
+                <biographical-notes bind:__l="__l" class="data-v-57280228" vueId="8dd740cc-7"></biographical-notes>
+            </swiper-item>
+        </swiper>
+    </view>
+    <fixed-box bind:__l="__l" class="data-v-57280228" vueId="8dd740cc-8"></fixed-box>
+    <live-dialog bind:__l="__l" bind:input="__e" class="data-v-57280228" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','liveDialogShow','$event',[] ] ] ] ] ]}}" flag="{{liveDialogFlag}}" item="{{liveDialogItem}}" value="{{liveDialogShow}}" vueId="8dd740cc-9"></live-dialog>
+</view>

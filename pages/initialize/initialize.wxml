@@ -1,0 +1,108 @@
+<view class="container _div data-v-1fe41546">
+    <swiper autoplay="{{false}}" circular="{{false}}" class="swiper data-v-1fe41546" current="{{current}}" duration="500" indicatorDots="{{false}}" interval="2000">
+        <swiper-item catchtouchmove="__e" class="data-v-1fe41546" data-event-opts="{{[ [ 'touchmove',[ [ '',['$event'] ] ] ] ]}}">
+            <view class="center _div data-v-1fe41546">
+                <view class="nav _div data-v-1fe41546">
+                    <view bindtap="__e" class="nextBtn _div data-v-1fe41546" data-event-opts="{{[ [ 'tap',[ [ 'nextBtnClick',[1] ] ] ] ]}}">跳过<image class="_img data-v-1fe41546" src="{{ossUrl+'images/new_wx_index/next.png'}}"></image>
+                    </view>
+                </view>
+                <view class="formbox data-v-1fe41546">
+                    <view class="formboxFlex mb12 data-v-1fe41546">
+                        <view class="formtit data-v-1fe41546">昵称：</view>
+                        <view class="inbox data-v-1fe41546">
+                            <input bindinput="__e" class="inputtxt nickname data-v-1fe41546" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','nickName','$event',[] ],['userinfo'] ] ] ] ]}}" placeholder="请输入昵称" placeholderClass="phsy" type="text" value="{{userinfo.nickName}}"></input>
+                        </view>
+                    </view>
+                    <view class="formboxFlex mb12 data-v-1fe41546">
+                        <view class="formtit data-v-1fe41546">身份：</view>
+                        <view class="inbox data-v-1fe41546">
+                            <picker bindchange="__e" class="picker inselect data-v-1fe41546" data-event-opts="{{[ [ 'change',[ [ 'bindPickerChange',['$event'] ] ] ] ]}}" indicatorClass="pickerCol" range="{{identity}}" value="{{identity_index}}">
+                                <view class="uni-input data-v-1fe41546">{{identity[identity_index]}}</view>
+                            </picker>
+                        </view>
+                    </view>
+                    <view class="formboxFlex mb12 data-v-1fe41546">
+                        <view class="formtit data-v-1fe41546">毕业院校：</view>
+                        <view class="inbox data-v-1fe41546">
+                            <input bindinput="__e" class="inputtxt school data-v-1fe41546" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','school','$event',[] ],['userinfo.userdetail'] ] ] ] ]}}" placeholder="输入您的最高毕业院校名称" placeholderClass="phsy" type="text" value="{{userinfo.userdetail.school}}"></input>
+                        </view>
+                    </view>
+                    <view class="formboxFlex mb12 data-v-1fe41546">
+                        <view class="formtit data-v-1fe41546">学历：</view>
+                        <view class="inbox data-v-1fe41546">
+                            <picker bindchange="__e" class="picker inselect data-v-1fe41546" data-event-opts="{{[ [ 'change',[ [ 'bindDegreeChange',['$event'] ] ] ] ]}}" indicatorClass="pickerCol" range="{{degree}}" value="{{degree_index}}">
+                                <view class="uni-input data-v-1fe41546">{{degree[degree_index]}}</view>
+                            </picker>
+                        </view>
+                    </view>
+                    <view class="formboxFlex mb12 data-v-1fe41546">
+                        <view class="formtit data-v-1fe41546">毕业届：</view>
+                        <view class="inbox data-v-1fe41546">
+                            <picker bindchange="__e" class="picker inselect data-v-1fe41546" data-event-opts="{{[ [ 'change',[ [ 'bindGraduationChange',['$event'] ] ] ] ]}}" indicatorClass="pickerCol" range="{{graduation_year}}" value="{{graduation_index}}">
+                                <view class="uni-input data-v-1fe41546">{{graduation_year[graduation_index]}}</view>
+                            </picker>
+                        </view>
+                    </view>
+                    <view class="formboxFlex mb12 data-v-1fe41546">
+                        <view class="formtit data-v-1fe41546">专业：</view>
+                        <view class="inbox data-v-1fe41546">
+                            <input bindinput="__e" class="inputtxt major data-v-1fe41546" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','major','$event',[] ],['userinfo.userdetail'] ] ] ] ]}}" placeholder="输入您的专业名称" placeholderClass="phsy" type="text" value="{{userinfo.userdetail.major}}"></input>
+                        </view>
+                    </view>
+                    <view class="formboxFlex mb32 data-v-1fe41546">
+                        <view class="formtit data-v-1fe41546">工作地点：</view>
+                        <view class="inbox right data-v-1fe41546">
+                            <input bindinput="__e" bindtap="__e" class="inselect location data-v-1fe41546" data-event-opts="{{[ [ 'tap',[ ['open'] ] ],[ 'input',[ [ '__set_model',[ '$0','location','$event',[] ],['userinfo.userdetail'] ] ] ] ]}}" disabled="{{true}}" id="address" placeholder="	请选择意向工作地点" placeholderClass="phsy" readonly="{{true}}" type="text" value="{{userinfo.userdetail.location}}"></input>
+                            <city-picker bind:__l="__l" bind:cancel="__e" bind:confirm="__e" class="data-v-1fe41546" column="{{column}}" data-event-opts="{{[ [ '^confirm',[ ['confirm'] ] ],[ '^cancel',[ ['cancel'] ] ] ]}}" defaultValue="{{defaultValue}}" maskCloseAble="{{maskCloseAble}}" visible="{{visible}}" vueId="46c1d700-1"></city-picker>
+                        </view>
+                    </view>
+                    <view bindtap="__e" class="abtn15 data-v-1fe41546" data-event-opts="{{[ [ 'tap',[ ['saveUser'] ] ] ]}}" id="submit_button">确定</view>
+                </view>
+            </view>
+        </swiper-item>
+        <swiper-item catchtouchmove="__e" class="data-v-1fe41546" data-event-opts="{{[ [ 'touchmove',[ [ '',['$event'] ] ] ] ]}}">
+            <view class="center _div data-v-1fe41546">
+                <view class="nav _div data-v-1fe41546">
+                    <view bindtap="__e" class="nextBtn _div data-v-1fe41546" data-event-opts="{{[ [ 'tap',[ [ 'nextBtnClick',[2] ] ] ] ]}}">跳过<image class="_img data-v-1fe41546" src="{{ossUrl+'images/new_wx_index/next.png'}}"></image>
+                    </view>
+                </view>
+                <view class="imgInfoBox1 data-v-1fe41546">
+                    <view class="imgInfoBox1_title data-v-1fe41546">设置密码</view>
+                    <view class="imgInfoBox1_desc data-v-1fe41546">密码必须包含数字、英文字母，长度不少于8个字符</view>
+                </view>
+                <view class="formbox data-v-1fe41546">
+                    <view class="formboxFlex mb12 data-v-1fe41546">
+                        <view class="inbox data-v-1fe41546">
+                            <input bindinput="__e" class="inputtxt pswd data-v-1fe41546" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','pswd','$event',[] ] ] ] ] ]}}" placeholder="请输入密码" style="text-align:left;" type="password" value="{{pswd}}" wx:if="{{!pswShow}}"></input>
+                            <input bindinput="__e" class="inputtxt pswd data-v-1fe41546" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','pswd','$event',[] ] ] ] ] ]}}" placeholder="请输入密码" style="text-align:left;" type="text" value="{{pswd}}" wx:else></input>
+                        </view>
+                        <view bindtap="__e" class="pswShowBtnBox _div data-v-1fe41546" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
+                            <image class="pswShowBtn _img data-v-1fe41546" src="{{pswShow?$root.m0:$root.m1}}"></image>
+                        </view>
+                    </view>
+                    <view class="formboxFlex mb12 data-v-1fe41546">
+                        <view class="inbox data-v-1fe41546">
+                            <input bindinput="__e" class="inputtxt repswd data-v-1fe41546" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','repswd','$event',[] ] ] ] ] ]}}" placeholder="请再次输入密码" style="text-align:left;" type="password" value="{{repswd}}" wx:if="{{!pswShow2}}"></input>
+                            <input bindinput="__e" class="inputtxt repswd data-v-1fe41546" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '','repswd','$event',[] ] ] ] ] ]}}" placeholder="请再次输入密码" style="text-align:left;" type="text" value="{{repswd}}" wx:else></input>
+                        </view>
+                        <view bindtap="__e" class="pswShowBtnBox _div data-v-1fe41546" data-event-opts="{{[ [ 'tap',[ [ 'e1',['$event'] ] ] ] ]}}">
+                            <image class="pswShowBtn _img data-v-1fe41546" src="{{pswShow2?$root.m2:$root.m3}}"></image>
+                        </view>
+                    </view>
+                    <view bindtap="__e" class="setPswBtn abtn15 data-v-1fe41546" data-event-opts="{{[ [ 'tap',[ ['savePasswd'] ] ] ]}}" id="submit_button">确定</view>
+                </view>
+            </view>
+        </swiper-item>
+    </swiper>
+    <view class="dialog_mask _div data-v-1fe41546" hidden="{{!dialogShow}}">
+        <view class="dialog _div data-v-1fe41546">
+            <view class="title _div data-v-1fe41546">注册成功</view>
+            <view class="text _div data-v-1fe41546">
+                <view class="txt_title _div data-v-1fe41546">注册好礼已到账：</view>
+                <view class="txt _div data-v-1fe41546">10企鹅币（可解锁教材）</view>
+                <view class="txt _div data-v-1fe41546">2次人岗匹配搜素权限</view>
+            </view>
+            <view bindtap="__e" class="btn _div data-v-1fe41546" data-event-opts="{{[ [ 'tap',[ [ 'dialogBtnClick',['$event'] ] ] ] ]}}">确认</view>
+        </view>
+    </view>
+</view>

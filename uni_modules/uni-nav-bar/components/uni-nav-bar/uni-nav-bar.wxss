@@ -1,0 +1,118 @@
+.uni-nav-bar-text.data-v-6bda1a90 {
+    font-size: 36rpx
+}
+
+.uni-nav-bar-right-text.data-v-6bda1a90 {
+    font-size: 12px
+}
+
+.uni-navbar__content.data-v-6bda1a90 {
+    background-color: initial;
+    position: relative
+}
+
+.uni-navbar-btn-text.data-v-6bda1a90 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    line-height: 12px
+}
+
+.uni-navbar__header.data-v-6bda1a90 {
+    font-size: 12px;
+    height: 44px;
+    padding: 0 10px
+}
+
+.uni-navbar__header-btns.data-v-6bda1a90,.uni-navbar__header.data-v-6bda1a90 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row
+}
+
+.uni-navbar__header-btns.data-v-6bda1a90 {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 120rpx
+}
+
+.uni-navbar__header-btns-left.data-v-6bda1a90 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    width: 120rpx
+}
+
+.uni-navbar__header-btns-right.data-v-6bda1a90 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end
+}
+
+.uni-navbar__header-container.data-v-6bda1a90 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: hidden;
+    padding: 0 10px
+}
+
+.uni-navbar__header-container-inner.data-v-6bda1a90 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    font-size: 12px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    overflow: hidden
+}
+
+.uni-navbar__placeholder-view.data-v-6bda1a90 {
+    height: 44px
+}
+
+.uni-navbar--fixed.data-v-6bda1a90 {
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 99
+}
+
+.uni-navbar--shadow.data-v-6bda1a90 {
+    box-shadow: 0 1px 6px #ccc
+}
+
+.uni-navbar--border.data-v-6bda1a90 {
+    border-bottom: 1rpx solid #eee
+}
+
+.uni-ellipsis-1.data-v-6bda1a90 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}

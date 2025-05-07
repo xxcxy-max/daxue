@@ -1,0 +1,40 @@
+<view class="container data-v-ce639b58">
+    <scroll-view bindrefresherrefresh="__e" bindscrolltolower="__e" class="notice-list data-v-ce639b58" data-event-opts="{{[ [ 'refresherrefresh',[ [ 'refreshEvent',['$event'] ] ] ],[ 'scrolltolower',[ [ 'tolowerEvent',['$event'] ] ] ] ]}}" refresherEnabled="{{true}}" refresherTriggered="{{triggered}}" scrollY="{{true}}" wx:if="{{!condition}}">
+        <view class="notice-item data-v-ce639b58" wx:for="{{msgList}}" wx:key="index">
+            <view class="time data-v-ce639b58">{{item.createTime}}</view>
+            <view bindtap="__e" class="notice-info data-v-ce639b58" data-event-opts="{{[ [ 'tap',[ [ 'toDetails',['$0',index],[ [ ['msgList','',index] ] ] ] ] ] ]}}">
+                <view class="title data-v-ce639b58">
+                    <view class="pr data-v-ce639b58">{{item.title}}</view>
+                    <view class="df1 data-v-ce639b58">
+                        <view class="li data-v-ce639b58" wx:if="{{item.isRead==0}}"></view>
+                    </view>
+                    <uni-icons bind:__l="__l" class="data-v-ce639b58" color="#000" size="16" type="right" vueId="{{'fe0ecd9c-1-'+index}}"></uni-icons>
+                </view>
+                <view class="tips data-v-ce639b58">
+                    <rich-text nodes="{{item.content}}"></rich-text>
+                </view>
+            </view>
+        </view>
+        <view class="data-v-ce639b58" style="height:160rpx;"></view>
+    </scroll-view>
+    <view bindtap="__e" class="vip-btn data-v-ce639b58" data-event-opts="{{[ [ 'tap',[ [ 'openEvent',['$event'] ] ] ] ]}}" wx:if="{{token&&!isVip}}">开通会员查看最新岗位信息</view>
+    <view class="notice data-v-ce639b58" wx:if="{{condition}}">
+        <view class="content data-v-ce639b58">
+            <image class="nullImg data-v-ce639b58" mode="widthFix" src="{{$root.m0}}"></image>
+            <view class="name data-v-ce639b58">{{token?'完善专业信息':'立即登录'}}</view>
+            <view class="tips data-v-ce639b58">{{token?'每日为您推送最新央国企优质岗位信息':'解锁专属岗位信息'}}</view>
+            <view bindtap="__e" class="btn data-v-ce639b58" data-event-opts="{{[ [ 'tap',[ [ 'toPromptly',['$event'] ] ] ] ]}}">{{'立即'+(token?'完善':'登录')+''}}<uni-icons bind:__l="__l" class="data-v-ce639b58" color="#fff" size="14" type="right" vueId="fe0ecd9c-2"></uni-icons>
+            </view>
+        </view>
+    </view>
+    <uni-popup bind:__l="__l" class="data-v-ce639b58 vue-ref" data-ref="popup" vueId="fe0ecd9c-3" vueSlots="{{['default']}}">
+        <view class="popupContent data-v-ce639b58">
+            <image class="vip-img data-v-ce639b58" mode="widthFix" src="{{$root.m1}}"></image>
+            <view class="name data-v-ce639b58">开通会员</view>
+            <view class="tips data-v-ce639b58">查看最新岗位信息</view>
+            <view bindtap="__e" class="btn data-v-ce639b58" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/pay/userpay'] ] ] ] ]}}">立即开通</view>
+            <uni-icons bind:__l="__l" bind:tap="__e" class="closeempty data-v-ce639b58" color="#000" data-event-opts="{{[ [ '^tap',[ ['closeEvent'] ] ] ]}}" size="16" type="closeempty" vueId="{{'fe0ecd9c-4'+','+'fe0ecd9c-3'}}"></uni-icons>
+        </view>
+    </uni-popup>
+    <information bind:__l="__l" bind:save="__e" class="data-v-ce639b58 vue-ref" data-event-opts="{{[ [ '^save',[ ['refresh'] ] ] ]}}" data-ref="information" vueId="fe0ecd9c-5"></information>
+</view>

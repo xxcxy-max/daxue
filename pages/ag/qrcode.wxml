@@ -1,0 +1,13 @@
+<view class="container">
+    <view data-v-8e7a40b6 class="w-header-wrapper _div" wx:if="{{$root.g0>0}}"></view>
+    <view class="qrcode1" wx:if="{{$root.g1>0}}">
+        <view class="qrcode2">
+            <image alt bindlongpress="__e" class="{{['_img',currentIndex==1?'image_left':'',currentIndex==2?'image_left1':'']}}" data-event-opts="{{[ [ 'longpress',[ [ 'longPress',['$0'],['imageList.__$n0'] ] ] ] ]}}" mode="widthFix" src="{{$root.m0}}"></image>
+        </view>
+    </view>
+    <view class="options" wx:if="{{$root.g2>0}}">
+        <navigator class="online-cc _a">
+            <label class="_span" style="color:#333;">↑↑↑ 长按上方图片保存分享 ↑↑↑</label>
+        </navigator>
+    </view>
+</view>

@@ -1,0 +1,26 @@
+.container {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.customer-image {
+    height: 100%;
+    margin-bottom: 20px;
+    width: 100%
+}
+
+.contact-button {
+    background-color: #07c160;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 45px
+}

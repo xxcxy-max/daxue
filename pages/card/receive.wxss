@@ -1,0 +1,203 @@
+.container .bg.data-v-1c351ddd {
+    left: 0
+}
+
+.container .scrollX.data-v-1c351ddd {
+    background-color: #effaff
+}
+
+.container .scrollX .top.data-v-1c351ddd {
+    padding-top: 92rpx;
+    text-align: center
+}
+
+.container .scrollX .top .top_img.data-v-1c351ddd {
+    height: 260rpx
+}
+
+.container .scrollX .card.data-v-1c351ddd {
+    -webkit-align-items: center;
+    align-items: center;
+    background-image: url("https://oss.cntjhr.com/static/images/caika/ck_bg_card.png");
+    border: 2rpx solid #fff;
+    border-radius: 64rpx 64rpx 64rpx 64rpx;
+    display: -webkit-flex;
+    display: flex;
+    height: 278rpx;
+    margin: 80rpx 32rpx 0rpx 34rpx;
+    width: 686rpx
+}
+
+.container .scrollX .card .card_left .card_title.data-v-1c351ddd {
+    height: 66rpx;
+    margin: 0rpx 48rpx;
+    width: 382rpx
+}
+
+.container .scrollX .card .card_left .card_school.data-v-1c351ddd {
+    -webkit-align-items: center;
+    align-items: center;
+    background: linear-gradient(90deg,#f0fdff,#bef5ff);
+    border: 2rpx solid #fff;
+    border-radius: 12rpx 12rpx 12rpx 12rpx;
+    display: -webkit-flex;
+    display: flex;
+    height: 44rpx;
+    margin: 22rpx 48rpx;
+    width: 380rpx
+}
+
+.container .scrollX .card .card_left .card_school .school_name.data-v-1c351ddd {
+    color: #0074e9;
+    font-family: PingFang SC;
+    font-size: 24rpx;
+    font-style: normal;
+    font-weight: 500;
+    height: 34rpx;
+    line-height: 34rpx;
+    margin-left: 12rpx;
+    margin-right: 8rpx;
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    text-transform: none;
+    white-space: nowrap;
+    width: 246rpx
+}
+
+.container .scrollX .card .card_left .card_school .card_count.data-v-1c351ddd {
+    color: #0074e9;
+    font-family: PingFang SC;
+    font-size: 24rpx;
+    font-style: normal;
+    font-weight: 500;
+    height: 34rpx;
+    line-height: 34rpx;
+    text-align: right;
+    text-transform: none;
+    width: 102rpx
+}
+
+.container .scrollX .card .card_right .logo.data-v-1c351ddd {
+    height: 192rpx;
+    width: 192rpx
+}
+
+.container .scrollX .receive.data-v-1c351ddd {
+    background-image: url("https://oss.cntjhr.com/static/images/caika/last-bg.png");
+    height: 368rpx;
+    margin-top: -134rpx;
+    padding-top: 126rpx
+}
+
+.container .scrollX .receive .receive_subtitle.data-v-1c351ddd {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.container .scrollX .receive .receive_subtitle .ck_icon_hat.data-v-1c351ddd {
+    height: 44rpx;
+    width: 44rpx
+}
+
+.container .scrollX .receive .receive_button.data-v-1c351ddd {
+    background-image: url("https://oss.cntjhr.com/static/images/caika/ck_btn_normal.png");
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(255,60,0,.8)
+}
+
+.container .scrollX .receive .receive_button.data-v-1c351ddd,.container .scrollX .receive .receive_button_disable.data-v-1c351ddd {
+    background-size: cover;
+    border: 4rpx solid #fff;
+    border-radius: 56rpx 56rpx 56rpx 56rpx;
+    font-family: PingFang SC;
+    font-size: 36rpx;
+    font-weight: 500;
+    height: 96rpx;
+    line-height: 96rpx;
+    margin: 26rpx auto 0;
+    text-align: center;
+    width: 592rpx
+}
+
+.container .scrollX .receive .receive_button_disable.data-v-1c351ddd {
+    background-image: url("https://oss.cntjhr.com/static/images/caika/ck_btn_Disable.png");
+    color: #86909c;
+    font-style: normal;
+    text-transform: none
+}
+
+.container .scrollX .poster .poster_banner.data-v-1c351ddd {
+    vertical-align: bottom;
+    width: 100%
+}
+
+.container .popup-view.data-v-1c351ddd {
+    background: #fff;
+    border-radius: 64rpx;
+    padding-bottom: 48rpx;
+    padding-top: 48rpx;
+    width: 496rpx;
+    z-index: 999
+}
+
+.container .popup-view .c93.data-v-1c351ddd {
+    color: #1d2129;
+    font-family: PingFang SC;
+    font-size: 40rpx;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+    text-transform: none
+}
+
+.container .popup-view .top-img.data-v-1c351ddd {
+    height: 80rpx;
+    margin: 0 auto;
+    width: 80rpx
+}
+
+.container .popup-view .f22.data-v-1c351ddd {
+    font-size: 44rpx
+}
+
+.container .popup-view .desc.data-v-1c351ddd {
+    color: #4e5969;
+    font-family: PingFang SC;
+    font-size: 28rpx;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 44rpx;
+    margin: 16rpx auto;
+    text-align: center;
+    text-transform: none;
+    width: 372rpx
+}
+
+.container .popup-view .service-icon.data-v-1c351ddd {
+    height: 32rpx;
+    margin-right: 12rpx;
+    width: 32rpx
+}
+
+.container .popup-view .btn.data-v-1c351ddd {
+    border-radius: 40rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-left: 48rpx;
+    width: calc(100% - 96rpx)
+}
+
+.container .popup-view .bgc93.data-v-1c351ddd {
+    background: linear-gradient(91deg,#07f,#53caff);
+    border-radius: 40rpx 40rpx 40rpx 40rpx;
+    color: #fff;
+    font-family: PingFang SC;
+    font-size: 32rpx;
+    font-weight: 500;
+    height: 80rpx;
+    text-align: center;
+    width: 400rpx
+}

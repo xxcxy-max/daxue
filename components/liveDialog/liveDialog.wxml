@@ -1,0 +1,29 @@
+<view class="maskDialog data-v-acf65178" wx:if="{{value}}">
+    <view bindtap="__e" class="maskBg _div data-v-acf65178" data-event-opts="{{[ [ 'tap',[ [ 'goLive',['$event'] ] ] ] ]}}">
+        <image class="maskBgImg _img data-v-acf65178" src="{{ossUrl+(flag==1?'static/images/lectureroom/liveDialog.png':'static/images/lectureroom/signDialog.png')}}"></image>
+        <view class="infoBox _div data-v-acf65178">
+            <view class="info data-v-acf65178">
+                <view class="tit data-v-acf65178">{{item.title}}</view>
+                <view catchtap="__e" class="statusBox data-v-acf65178" data-event-opts="{{[ [ 'tap',[ ['goLive'] ] ] ]}}" wx:if="{{item.new_live_status==2||item.new_live_status==3}}">
+                    <image class="icon1 _img data-v-acf65178" src="{{ossUrl+'static/images/lectureroom/icon1.svg'}}"></image>
+                    <view class="txt data-v-acf65178">直播中</view>
+                    <image class="icon2 _img data-v-acf65178" src="{{ossUrl+'static/images/lectureroom/icon2.svg'}}"></image>
+                </view>
+                <view class="statusBox data-v-acf65178" wx:else>
+                    <view class="time data-v-acf65178">{{'开课时间：'+$root.m0}}</view>
+                </view>
+            </view>
+            <view class="imgBox data-v-acf65178">
+                <image class="img _img data-v-acf65178" mode="widthFix" src="{{item.icon_url}}" wx:if="{{item.icon_url}}"></image>
+                <image class="img _img data-v-acf65178" mode="widthFix" src="{{ossUrl+'static/images/default.png'}}" wx:else></image>
+            </view>
+            <image class="iconl _img data-v-acf65178" src="{{ossUrl+'static/images/lectureroom/icon_free.svg'}}" wx:if="{{item.free_scope==0||item.free_scope==1}}"></image>
+            <image class="iconl _img data-v-acf65178" src="{{ossUrl+'static/images/lectureroom/icon_vip.svg'}}" wx:else></image>
+            <image class="iconr _img data-v-acf65178" src="{{ossUrl+'static/images/lectureroom/tag_ing.svg'}}" wx:if="{{item.new_live_status!=4}}"></image>
+            <image class="iconr _img data-v-acf65178" src="{{ossUrl+'static/images/lectureroom/tag_end.svg'}}" wx:else></image>
+        </view>
+        <view catchtap="__e" class="closeBox _div data-v-acf65178" data-event-opts="{{[ [ 'tap',[ [ 'closeDialog',['$event'] ] ] ] ]}}">
+            <image class="closeImg _img data-v-acf65178" src="{{ossUrl+'static/images/user/icon_close.png'}}"></image>
+        </view>
+    </view>
+</view>

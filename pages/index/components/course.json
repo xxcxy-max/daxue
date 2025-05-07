@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "uni-icons": "pages\\index\\components\\uni_modules\\uni-icons\\components\\uni-icons\\uni-icons",
+    "bottom-loading": "pages\\index\\components\\components\\bottomLoading\\bottomLoading"
+  }
+}

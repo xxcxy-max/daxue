@@ -1,0 +1,47 @@
+<view class="container pr data-v-1c351ddd">
+    <image class="bg pa w100 data-v-1c351ddd" mode="widthFix" src="{{$root.m0}}" style="{{'top:'+top+'px'+';'}}"></image>
+    <view class="head data-v-1c351ddd" id="head">
+        <uni-nav-bar backgroundColor="rgba(0,0,0,0)" bind:__l="__l" bind:clickLeft="__e" border="{{false}}" class="data-v-1c351ddd" data-event-opts="{{[ [ '^clickLeft',[ [ 'toPage',[1,'back'] ] ] ] ]}}" leftIcon="left" statusBar="{{true}}" title="校园公益计划" vueId="6a6f1ec9-1"></uni-nav-bar>
+    </view>
+    <scroll-view bindscroll="__e" class="scrollX bsbb data-v-1c351ddd" data-event-opts="{{[ [ 'scroll',[ [ 'scrollEvent',['$event'] ] ] ] ]}}" scrollY="{{true}}" style="{{'height:'+'calc(100vh - '+head+'px)'+';'}}">
+        <view class="top data-v-1c351ddd">
+            <image class="top_img data-v-1c351ddd" mode="widthFix" src="{{$root.m1}}"></image>
+        </view>
+        <view class="card data-v-1c351ddd">
+            <view class="card_left data-v-1c351ddd">
+                <image class="card_title data-v-1c351ddd" mode="widthFix" src="{{$root.m2}}"></image>
+                <view class="card_school data-v-1c351ddd">
+                    <view class="school_name data-v-1c351ddd">{{''+school.schoolName+''}}</view>
+                    <view class="card_count data-v-1c351ddd">{{'仅剩'+school.remainingNum+'张'}}</view>
+                </view>
+            </view>
+            <view class="card_right data-v-1c351ddd">
+                <image class="logo data-v-1c351ddd" mode="widthFix" src="{{$root.m3}}"></image>
+            </view>
+        </view>
+        <view class="receive bgrn bgs_c bsbb pr data-v-1c351ddd">
+            <view class="receive_subtitle data-v-1c351ddd">
+                <image class="ck_icon_hat data-v-1c351ddd" mode="widthFix" src="{{$root.m4}}"></image>
+                <view class="receive_subtitle_con data-v-1c351ddd">一站式搞定央国企求职，助力快速上岸！</view>
+            </view>
+            <view bindtap="__e" class="receive_button data-v-1c351ddd" data-event-opts="{{[ [ 'tap',[ [ 'receive',['$event'] ] ] ] ]}}" wx:if="{{school.remainingNum>0}}">立即领取</view>
+            <view class="receive_button_disable data-v-1c351ddd" wx:else>该学校暂无可领取量</view>
+        </view>
+        <view class="poster data-v-1c351ddd">
+            <image class="poster_banner data-v-1c351ddd" mode="widthFix" src="{{$root.m5}}"></image>
+            <image class="poster_banner data-v-1c351ddd" mode="widthFix" src="{{$root.m6}}"></image>
+        </view>
+    </scroll-view>
+    <uni-popup bind:__l="__l" class="data-v-1c351ddd vue-ref" data-ref="popup" vueId="6a6f1ec9-2" vueSlots="{{['default']}}">
+        <view class="popup-view pr data-v-1c351ddd">
+            <cover-view class="top-img data-v-1c351ddd">
+                <cover-image class="image_pop data-v-1c351ddd" src="{{$root.m7}}" wx:if="{{isSuccess}}"></cover-image>
+                <cover-image class="image_pop data-v-1c351ddd" src="{{$root.m8}}" wx:else></cover-image>
+            </cover-view>
+            <view class="tc f22 fw6 c93 data-v-1c351ddd">{{isSuccess==1?'领取成功':'领取失败'}}</view>
+            <view class="f15 fw4 tc desc data-v-1c351ddd">{{msg}}</view>
+            <view bindtap="__e" class="btn bgc93 data-v-1c351ddd" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pages/user/index','tab'] ] ] ] ]}}" wx:if="{{isSuccess}}">去使用</view>
+            <view bindtap="__e" class="btn bgc93 data-v-1c351ddd" data-event-opts="{{[ [ 'tap',[ ['closeRef'] ] ] ]}}" wx:else>确定</view>
+        </view>
+    </uni-popup>
+</view>

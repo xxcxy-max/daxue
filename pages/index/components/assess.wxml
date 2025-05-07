@@ -1,0 +1,17 @@
+<scroll-view bindrefresherrefresh="__e" bindscrolltolower="__e" class="scrollHeight data-v-6301a217" data-event-opts="{{[ [ 'refresherrefresh',[ [ 'refreshEvent',['$event'] ] ] ],[ 'scrolltolower',[ [ 'tolowerEvent',['$event'] ] ] ] ]}}" refresherEnabled="{{true}}" refresherTriggered="{{triggered}}" scrollY="true">
+    <view class="main-view data-v-6301a217">
+        <image class="banner data-v-6301a217" mode="widthFix" src="{{$root.m0}}"></image>
+        <view class="assessList data-v-6301a217">
+            <view bindtap="__e" class="assessItem data-v-6301a217" data-event-opts="{{[ [ 'tap',[ [ 'openWeb',['$0'],[ [ ['assessList','',index] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="index">
+                <image class="assess-cover data-v-6301a217" mode="aspectFill" src="{{item[$orig].coverUrl}}"></image>
+                <view class="assess-title data-v-6301a217">{{item[$orig].name}}</view>
+                <image class="assess-icon data-v-6301a217" mode="aspectFill" src="{{item.m1}}"></image>
+            </view>
+            <bottom-loading bind:__l="__l" bind:input="__e" class="data-v-6301a217" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','isLoading','$event',[] ] ] ] ] ]}}" value="{{isLoading}}" vueId="0599bc62-1"></bottom-loading>
+            <view class="no_data data-v-6301a217" wx:if="{{$root.g0==0}}">
+                <image class="img data-v-6301a217" mode="widthFix" src="{{$root.m2}}"></image>
+            </view>
+            <view class="no_more data-v-6301a217" wx:if="{{$root.g1}}">没有更多了...</view>
+        </view>
+    </view>
+</scroll-view>

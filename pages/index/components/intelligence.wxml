@@ -1,0 +1,79 @@
+<view class="scrollHeight data-v-5efc47b2">
+    <scroll-view bindrefresherrefresh="__e" bindscrolltolower="__e" class="scrollHeight data-v-5efc47b2" data-event-opts="{{[ [ 'refresherrefresh',[ [ 'refreshEvent',['$event'] ] ] ],[ 'scrolltolower',[ [ 'tolowerEvent',['$event'] ] ] ] ]}}" refresherEnabled="{{true}}" refresherTriggered="{{triggered}}" scrollY="{{true}}">
+        <view class="main-view data-v-5efc47b2">
+            <view bindtap="__e" class="search-view data-v-5efc47b2" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/match/index'] ] ] ] ]}}">
+                <image class="new-img data-v-5efc47b2" mode="widthFix" src="{{$root.m0}}"></image>
+                <view class="search-contions data-v-5efc47b2">
+                    <view class="search-post-view data-v-5efc47b2">{{''+'累计'+jobCount+'个岗位信息'+''}}</view>
+                    <view class="search-btn data-v-5efc47b2">
+                        <image class="search-btn-icon data-v-5efc47b2" mode="aspectFill" src="{{$root.m1}}"></image>匹配央国企岗位信息</view>
+                </view>
+            </view>
+            <view class="nav-list-view data-v-5efc47b2">
+                <image bindtap="__e" class="nav-img data-v-5efc47b2" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/course/explain'] ] ] ] ]}}" mode="aspectFill" src="{{$root.m2}}"></image>
+                <image bindtap="__e" class="nav-img data-v-5efc47b2" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/book/index'] ] ] ] ]}}" mode="aspectFill" src="{{$root.m3}}"></image>
+            </view>
+            <view class="data-v-5efc47b2">
+                <view class="tabs data-v-5efc47b2">
+                    <view bindtap="__e" class="{{['tab-item','data-v-5efc47b2',timeId=='24h'?'tabZindex':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'tabEvent',['24h'] ] ] ] ]}}">
+                        <image class="tabs-bg-img-left data-v-5efc47b2" mode="aspectFill" src="{{$root.m4}}"></image>
+                        <view class="{{['tabs-title','data-v-5efc47b2',timeId=='24h'?'tabs_bg_7d':'tabs_bg_24h']}}">{{'24h新增('+jobCount24h+')'}}</view>
+                        <image class="tabs-bg-img-right data-v-5efc47b2" mode="aspectFill" src="{{$root.m5}}"></image>
+                    </view>
+                    <view bindtap="__e" class="{{['tab-item','data-v-5efc47b2',timeId=='7d'?'tabZindex':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'tabEvent',['7d'] ] ] ] ]}}">
+                        <image class="tabs-bg-img-left data-v-5efc47b2" mode="aspectFill" src="{{$root.m6}}"></image>
+                        <view class="{{['tabs-title','data-v-5efc47b2',timeId=='7d'?'tabs_bg_7d':'tabs_bg_24h']}}">{{'7天新增('+jobCount7d+')'}}</view>
+                        <image class="tabs-bg-img-right data-v-5efc47b2" mode="aspectFill" src="{{$root.m7}}"></image>
+                    </view>
+                </view>
+                <view class="list data-v-5efc47b2">
+                    <view class="item data-v-5efc47b2" wx:for="{{$root.l0}}" wx:key="index">
+                        <view class="item-title data-v-5efc47b2">{{item[$orig].coName+''}}<image class="item-icon data-v-5efc47b2" mode="aspectFill" src="{{item.m8}}" wx:if="{{item[$orig].xxlx=='非央国企信息汇总'}}"></image>
+                        </view>
+                        <view class="info data-v-5efc47b2">
+                            <view class="labelList data-v-5efc47b2">
+                                <view class="label label_c_6382ff data-v-5efc47b2">{{item[$orig].position}}</view>
+                                <view class="label label_c_f68b27 data-v-5efc47b2">{{item[$orig].education}}</view>
+                                <view class="label label_c_dbb90a data-v-5efc47b2">{{item[$orig].batch}}</view>
+                            </view>
+                            <view class="data-v-5efc47b2">
+                                <view class="detail data-v-5efc47b2">
+                                    <text class="bold-title data-v-5efc47b2">岗位名称：</text>
+                                    <text class="desc data-v-5efc47b2">{{item[$orig].jobTitle}}</text>
+                                </view>
+                                <view class="detail data-v-5efc47b2">
+                                    <text class="bold-title data-v-5efc47b2">涉及专业：</text>
+                                    <text class="desc data-v-5efc47b2">{{item[$orig].major}}</text>
+                                </view>
+                                <view class="detail data-v-5efc47b2">
+                                    <text class="bold-title data-v-5efc47b2">起止时间：</text>
+                                    <text class="desc data-v-5efc47b2">{{item[$orig].startDate+' - '+item[$orig].deadline}}</text>
+                                </view>
+                                <view class="detail data-v-5efc47b2">
+                                    <text class="bold-title data-v-5efc47b2">所在城市：</text>
+                                    <text class="desc data-v-5efc47b2">{{item[$orig].location}}</text>
+                                </view>
+                                <view class="detail data-v-5efc47b2" wx:if="{{item[$orig].requirements}}">
+                                    <text class="bold-title data-v-5efc47b2">应试要求：</text>
+                                    <text class="desc data-v-5efc47b2">{{item[$orig].requirements}}</text>
+                                </view>
+                            </view>
+                            <view class="bottom-btn-view data-v-5efc47b2">
+                                <view class="icon-view data-v-5efc47b2">
+                                    <image catchtap="__e" class="icon data-v-5efc47b2" data-event-opts="{{[ [ 'tap',[ [ 'favorites',['$0',1],[ [ ['list','',index] ] ] ] ] ] ]}}" src="{{item.m9}}" wx:if="{{item[$orig].isFavorites==0}}"></image>
+                                    <image catchtap="__e" class="icon data-v-5efc47b2" data-event-opts="{{[ [ 'tap',[ [ 'favorites',['$0',0],[ [ ['list','',index] ] ] ] ] ] ]}}" src="{{item.m10}}" wx:else></image>
+                                </view>
+                                <view bindtap="__e" class="copy-btn data-v-5efc47b2" data-event-opts="{{[ [ 'tap',[ [ 'copyLink',['$0'],[ [ ['list','',index,'recruitmentLink'] ] ] ] ] ] ]}}">报考链接</view>
+                            </view>
+                        </view>
+                    </view>
+                    <bottom-loading bind:__l="__l" bind:input="__e" class="data-v-5efc47b2" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','isLoading','$event',[] ] ] ] ] ]}}" value="{{isLoading}}" vueId="fee5a0d8-1"></bottom-loading>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view bindtap="__e" class="footer-vip data-v-5efc47b2" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/pay/userpay'] ] ] ] ]}}" wx:if="{{!vipFlag}}">
+        <view class="text data-v-5efc47b2">开通会员解锁全部内容</view>
+        <image class="icon data-v-5efc47b2" src="{{$root.m11}}"></image>
+    </view>
+</view>

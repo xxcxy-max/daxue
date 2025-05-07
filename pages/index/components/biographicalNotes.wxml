@@ -1,0 +1,20 @@
+<scroll-view bindrefresherrefresh="__e" bindscrolltolower="__e" class="scrollHeight data-v-da1f31da" data-event-opts="{{[ [ 'refresherrefresh',[ [ 'refreshEvent',['$event'] ] ] ],[ 'scrolltolower',[ [ 'tolowerEvent',['$event'] ] ] ] ]}}" refresherEnabled="{{true}}" refresherTriggered="{{triggered}}" scrollY="true">
+    <view class="main-view data-v-da1f31da">
+        <view class="resume-list data-v-da1f31da">
+            <view bindtap="__e" class="resume-item data-v-da1f31da" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/course/resume_detail?id='+item[$orig].id] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="index">
+                <view class="resume-image-view data-v-da1f31da">
+                    <image class="resume-image data-v-da1f31da" mode="aspectFill" src="{{item[$orig].coverUrl?item[$orig].coverUrl:item.m0}}"></image>
+                </view>
+                <view class="resume-info data-v-da1f31da">
+                    <view class="resume-title data-v-da1f31da">{{item[$orig].name}}</view>
+                    <view class="resume-count data-v-da1f31da">{{item[$orig].childCount+'套模板'}}</view>
+                </view>
+            </view>
+            <bottom-loading bind:__l="__l" bind:input="__e" class="data-v-da1f31da" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','isLoading','$event',[] ] ] ] ] ]}}" value="{{isLoading}}" vueId="69c6075a-1"></bottom-loading>
+            <view class="no_data data-v-da1f31da" wx:if="{{$root.g0==0}}">
+                <image class="img _img data-v-da1f31da" mode="widthFix" src="{{$root.m1}}"></image>
+            </view>
+            <view class="no_more data-v-da1f31da" wx:if="{{$root.g1}}">没有更多了...</view>
+        </view>
+    </view>
+</scroll-view>

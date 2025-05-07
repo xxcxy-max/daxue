@@ -1,0 +1,49 @@
+.pupop .popup-box.data-v-37587c8a {
+    background: #fff;
+    bottom: -315px;
+    left: 0;
+    padding-bottom: 50px;
+    position: fixed;
+    z-index: 99999
+}
+
+.pupop .popup-box .pupop-btn.data-v-37587c8a {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    height: 40px;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0 30rpx
+}
+
+.pupop .pupop-model.data-v-37587c8a {
+    background: rgba(0,0,0,.5);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999
+}
+
+.pupop .pupop-models.data-v-37587c8a {
+    display: none
+}
+
+.pupop .picker-view.data-v-37587c8a {
+    height: 225px;
+    margin-top: 20rpx;
+    width: 750rpx
+}
+
+.pupop .item.data-v-37587c8a {
+    -webkit-align-items: center;
+    align-items: center;
+    height: 50px;
+    -webkit-justify-content: center;
+    justify-content: center;
+    line-height: 50px;
+    text-align: center
+}

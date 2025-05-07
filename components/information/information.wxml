@@ -1,0 +1,34 @@
+<view class="data-v-7d9e2244">
+    <uni-popup bind:__l="__l" class="data-v-7d9e2244 vue-ref" data-ref="popup" vueId="64ed6de8-1" vueSlots="{{['default']}}">
+        <view class="info-view data-v-7d9e2244">
+            <view class="title-view data-v-7d9e2244">
+                <view class="name data-v-7d9e2244">完善专业信息</view>
+                <view class="tips data-v-7d9e2244">将每日为您智能推送最新央国企优质岗位信息</view>
+                <uni-icons bind:__l="__l" bind:tap="__e" class="closeempty-icon data-v-7d9e2244" color="#ffffff" data-event-opts="{{[ [ '^tap',[ ['close'] ] ] ]}}" size="18" type="closeempty" vueId="{{'64ed6de8-2'+','+'64ed6de8-1'}}"></uni-icons>
+            </view>
+            <view class="info data-v-7d9e2244">
+                <view class="item data-v-7d9e2244">
+                    <view class="title data-v-7d9e2244">学校</view>
+                    <view class="flexX1 data-v-7d9e2244">
+                        <input bindinput="__e" class="input data-v-7d9e2244" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','school','$event',[] ],['info'] ] ] ] ]}}" maxlength="30" placeholder="请输入您的毕业学校名称" placeholderClass="c99" type="text" value="{{info.school}}"></input>
+                    </view>
+                </view>
+                <view class="item data-v-7d9e2244">
+                    <view class="title data-v-7d9e2244">专业</view>
+                    <view class="flexX1 data-v-7d9e2244">
+                        <input bindinput="__e" class="input data-v-7d9e2244" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','major','$event',[] ],['info'] ] ] ] ]}}" maxlength="20" placeholder="请输入您的专业名称" placeholderClass="c99" type="text" value="{{info.major}}"></input>
+                    </view>
+                </view>
+                <view class="item data-v-7d9e2244">
+                    <view class="title data-v-7d9e2244">学历</view>
+                    <view class="flexX1 data-v-7d9e2244">
+                        <picker bindchange="__e" class="data-v-7d9e2244" data-event-opts="{{[ [ 'change',[ [ 'bindDegreeChange',['$event'] ] ] ] ]}}" range="{{degree}}" value="{{degreeIndex}}">
+                            <view class="{{['input','data-v-7d9e2244',!info.degree?'c99':'']}}">{{info.degree?info.degree:'请选择您的学历'}}</view>
+                        </picker>
+                    </view>
+                </view>
+                <view bindtap="__e" class="btn data-v-7d9e2244" data-event-opts="{{[ [ 'tap',[ [ 'saveBtn',['$event'] ] ] ] ]}}">完 成</view>
+            </view>
+        </view>
+    </uni-popup>
+</view>

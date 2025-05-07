@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "大学生求职神器",
+  "usingComponents": {
+    "uni-forms": "pages\\login\\uni_modules\\uni-forms\\components\\uni-forms\\uni-forms",
+    "uni-forms-item": "pages\\login\\uni_modules\\uni-forms\\components\\uni-forms-item\\uni-forms-item"
+  }
+}

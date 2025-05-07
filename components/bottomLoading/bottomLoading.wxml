@@ -1,0 +1,11 @@
+<view class="_div data-v-a5005bb0">
+    <view class="loading _div data-v-a5005bb0" wx:if="{{value}}">
+        <view class="dots-container _section data-v-a5005bb0">
+            <view class="dot _div data-v-a5005bb0"></view>
+            <view class="dot _div data-v-a5005bb0"></view>
+            <view class="dot _div data-v-a5005bb0"></view>
+            <view class="dot _div data-v-a5005bb0"></view>
+            <view class="dot _div data-v-a5005bb0"></view>
+        </view>
+    </view>
+</view>

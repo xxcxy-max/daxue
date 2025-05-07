@@ -1,0 +1,201 @@
+.uni-pay.data-v-1f87f297 {
+    --bgcolor: #f3f3f3
+}
+
+.mobile-pay-popup.data-v-1f87f297 {
+    background-color: var(--bgcolor);
+    border-radius: 30rpx 30rpx 0 0;
+    min-height: 70vh;
+    overflow: hidden
+}
+
+.mobile-pay-popup .mobile-pay-popup-title.data-v-1f87f297 {
+    background-color: #fff;
+    font-size: 40rpx;
+    font-weight: 700;
+    padding: 20rpx;
+    text-align: center
+}
+
+.mobile-pay-popup .mobile-pay-popup-amount-box.data-v-1f87f297 {
+    background-color: #fff;
+    padding: 30rpx
+}
+
+.mobile-pay-popup .mobile-pay-popup-amount-box .mobile-pay-popup-amount.data-v-1f87f297 {
+    color: #e43d33;
+    font-size: 60rpx;
+    margin-top: 20rpx
+}
+
+.mobile-pay-popup .mobile-pay-popup-provider-list.data-v-1f87f297 {
+    background-color: #fff;
+    margin-top: 20rpx
+}
+
+.pc-pay-popup.data-v-1f87f297 {
+    background-color: var(--bgcolor);
+    border-radius: 10px;
+    height: 600px;
+    overflow: hidden;
+    width: 800px
+}
+
+.pc-pay-popup .pc-pay-popup-title.data-v-1f87f297 {
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    height: 66px;
+    line-height: 66px;
+    text-align: center
+}
+
+.pc-pay-popup .pc-pay-popup-flex.data-v-1f87f297 {
+    display: -webkit-flex;
+    display: flex;
+    width: 100%
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-qrcode-box.data-v-1f87f297 {
+    -webkit-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    height: calc(600px - 66px);
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-qrcode-box .pc-pay-popup-qrcode-image.data-v-1f87f297 {
+    height: 225px;
+    width: 225px
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-qrcode-box .pc-pay-popup-amount-box.data-v-1f87f297 {
+    text-align: center
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-qrcode-box .pc-pay-popup-amount-box .pc-pay-popup-amount-tips.data-v-1f87f297 {
+    color: #333;
+    font-size: 20px;
+    margin-top: 20px
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-qrcode-box .pc-pay-popup-amount-box .pc-pay-popup-amount.data-v-1f87f297 {
+    color: #dd524d;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 20px
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-qrcode-box .pc-pay-popup-complete-button.data-v-1f87f297 {
+    margin-top: 20px
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-provider-list.data-v-1f87f297 {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    width: 300px
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-provider-list .pc-pay-popup-provider-item.data-v-1f87f297 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    padding: 20px
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-provider-list .pc-pay-popup-provider-item .pc-pay-popup-provider-image.data-v-1f87f297 {
+    height: 60px;
+    width: 60px
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-provider-list .pc-pay-popup-provider-item .pc-pay-popup-provider-text.data-v-1f87f297 {
+    color: #333;
+    font-size: 20px;
+    margin-left: 10px
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-provider-list .pc-pay-popup-provider-item.active.data-v-1f87f297 {
+    background-color: #fff
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-provider-list .pc-pay-popup-provider-item.data-v-1f87f297:hover {
+    background-color: #fff;
+    cursor: pointer
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-provider-list .pc-pay-popup-logo.data-v-1f87f297 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex: 1;
+    flex: 1;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.pc-pay-popup .pc-pay-popup-flex .pc-pay-popup-provider-list .pc-pay-popup-logo wx-image.data-v-1f87f297 {
+    width: 120px
+}
+
+.qrcode-popup-content.data-v-1f87f297 {
+    background-color: #fff;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    padding: 40rpx;
+    text-align: center;
+    width: 600rpx
+}
+
+.qrcode-popup-content .qrcode-image.data-v-1f87f297 {
+    height: 450rpx;
+    width: 450rpx
+}
+
+.qrcode-popup-content .qrcode-popup-info.data-v-1f87f297 {
+    padding: 20rpx;
+    text-align: center
+}
+
+.qrcode-popup-content .qrcode-popup-info .qrcode-popup-info-fee.data-v-1f87f297 {
+    color: red;
+    font-size: 60rpx;
+    font-weight: 700
+}
+
+.qrcode-popup-content .qrcode-popup-cancel.data-v-1f87f297 {
+    margin-top: 20rpx;
+    text-align: center
+}
+
+.pay-confirm-popup-content.data-v-1f87f297 {
+    background-color: #fff;
+    border-radius: 10rpx;
+    padding: 40rpx;
+    width: 550rpx
+}
+
+.pay-confirm-popup-content .pay-confirm-popup-title.data-v-1f87f297 {
+    margin-bottom: 30rpx;
+    padding: 20rpx 0;
+    text-align: center
+}
+
+.pay-confirm-popup-content .pay-confirm-popup-refresh.data-v-1f87f297 {
+    margin-top: 20rpx
+}
+
+.pay-confirm-popup-content .pay-confirm-popup-cancel.data-v-1f87f297 {
+    margin-top: 20rpx;
+    text-align: center
+}

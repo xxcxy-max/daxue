@@ -1,0 +1,5 @@
+<view class="container _div data-v-69e99a58" wx:if="{{value}}">
+    <view class="loader _div data-v-69e99a58">
+        <view class="justify-content-center jimu-primary-loading _div data-v-69e99a58"></view>
+    </view>
+</view>

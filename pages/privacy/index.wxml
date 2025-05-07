@@ -1,0 +1,8 @@
+<view class="container">
+    <view>
+        <rich-text nodes="{{article.content}}"></rich-text>
+    </view>
+    <view class="btn">
+        <view bindtap="__e" class="xia_btn" data-event-opts="{{[ [ 'tap',[ ['agress'] ] ] ]}}">同意并继续</view>
+    </view>
+</view>

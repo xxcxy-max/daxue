@@ -1,0 +1,46 @@
+<scroll-view bindrefresherrefresh="__e" bindscrolltolower="__e" class="scrollHeight data-v-7930db4e" data-event-opts="{{[ [ 'refresherrefresh',[ [ 'refreshEvent',['$event'] ] ] ],[ 'scrolltolower',[ [ 'tolowerEvent',['$event'] ] ] ] ]}}" refresherEnabled="{{true}}" refresherTriggered="{{triggered}}" scrollIntoView="{{scrollTo}}" scrollY="true">
+    <view class="main-view data-v-7930db4e">
+        <image class="banner data-v-7930db4e" mode="aspectFill" src="{{$root.m0}}"></image>
+    </view>
+    <view class="container data-v-7930db4e">
+        <view class="filter data-v-7930db4e" id="filter">
+            <view class="navContent data-v-7930db4e">
+                <view class="nav-view data-v-7930db4e">
+                    <scroll-view class="nav data-v-7930db4e" id="scroll" scrollLeft="{{scrollLeft}}" scrollWithAnimation="{{true}}" scrollX="{{true}}" wx:if="{{!filterShow}}">
+                        <view bindtap="__e" class="{{['nav-item','scroll-item','data-v-7930db4e',navIndex==index?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navEvent',['$event',index] ] ] ] ]}}" wx:for="{{navList}}" wx:key="index">{{''+item.label+''}}</view>
+                    </scroll-view>
+                    <view class="filter-title data-v-7930db4e" wx:else>课程类别</view>
+                </view>
+                <view bindtap="__e" class="down-btn data-v-7930db4e" data-event-opts="{{[ [ 'tap',[ [ 'filterEvent',['$event'] ] ] ] ]}}">
+                    <uni-icons bind:__l="__l" class="data-v-7930db4e" color="#1D2129" size="20" type="{{filterShow?'up':'down'}}" vueId="a629e110-1"></uni-icons>
+                </view>
+                <view class="{{['screen','data-v-7930db4e',filterShow==true?'screenActive':'']}}">
+                    <view bindtap="__e" class="{{['nav-item','scroll-item','data-v-7930db4e',navIndex==index?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navEvent',[null,index] ] ] ] ]}}" wx:for="{{navList}}" wx:key="index">{{''+item.label+''}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="course-list data-v-7930db4e">
+            <view bindtap="__e" class="mask data-v-7930db4e" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}" wx:if="{{filterShow}}"></view>
+            <view bindtap="__e" class="{{['course-item','data-v-7930db4e',index==$root.g0-1?'course-last-child':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/course/curriculum_detail?id='+item[$orig].id] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="index">
+                <view class="cover_img data-v-7930db4e">
+                    <image class="img data-v-7930db4e" mode="aspectFit" src="{{item[$orig].iconUrl}}"></image>
+                    <view class="{{['price-view','data-v-7930db4e',item[$orig].freeScope==1?'c008C4A':item[$orig].freeScope==2?'c933F00':item[$orig].freeScope==3?'cfff':'c5E3200']}}" style="{{'background-image:'+'url('+item.m1+')'+';'}}">{{''+(item[$orig].freeScope==1?'免费':item[$orig].freeScope==2?'会员':item[$orig].freeScope==3?'兑换':'付费')+''}}</view>
+                </view>
+                <view class="detail txt1 data-v-7930db4e">
+                    <view class="name txt1 data-v-7930db4e">{{item[$orig].name}}</view>
+                    <view class="tips txt3 data-v-7930db4e">{{item[$orig].subtitle}}</view>
+                    <view class="label data-v-7930db4e">
+                        <view class="tag-label bg_color_00a8ac data-v-7930db4e" wx:if="{{item[$orig].sectionCount>0}}">
+                            <image class="icon data-v-7930db4e" mode="widthFix" src="{{item.m2}}"></image>{{item[$orig].sectionCount+'课时'}}</view>
+                        <view class="tag-label bg_color_F76C2C data-v-7930db4e">{{navList[navIndex].label}}</view>
+                    </view>
+                </view>
+            </view>
+            <bottom-loading bind:__l="__l" bind:input="__e" class="data-v-7930db4e" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','isLoading','$event',[] ] ] ] ] ]}}" value="{{isLoading}}" vueId="a629e110-2" wx:if="{{$root.g1>0}}"></bottom-loading>
+            <view class="no_data data-v-7930db4e" wx:if="{{$root.g2==0}}">
+                <image class="nullimage data-v-7930db4e" mode="widthFix" src="{{$root.m3}}"></image>
+            </view>
+            <view class="no_more data-v-7930db4e" wx:if="{{$root.g3}}">没有更多了...</view>
+        </view>
+    </view>
+</scroll-view>

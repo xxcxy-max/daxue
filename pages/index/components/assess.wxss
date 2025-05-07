@@ -1,0 +1,70 @@
+.scrollHeight.data-v-6301a217 {
+    height: 100%;
+    width: 100%
+}
+
+.scrollHeight .main-view.data-v-6301a217 {
+    background: #f2f7fa;
+    padding: 0 32rpx 40rpx
+}
+
+.scrollHeight .main-view .banner.data-v-6301a217 {
+    border-radius: 12px;
+    width: 100%
+}
+
+.scrollHeight .main-view .assessList.data-v-6301a217 {
+    background: #fff;
+    border-radius: 24rpx 24rpx 24rpx 24rpx;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    margin-top: 32rpx;
+    padding: 32rpx 32rpx 0
+}
+
+.scrollHeight .main-view .assessList .assessItem.data-v-6301a217 {
+    margin-bottom: 32rpx;
+    position: relative
+}
+
+.scrollHeight .main-view .assessList .assessItem .assess-cover.data-v-6301a217 {
+    height: 176rpx;
+    width: 294rpx
+}
+
+.scrollHeight .main-view .assessList .assessItem .assess-title.data-v-6301a217 {
+    -webkit-line-clamp: 2;
+    word-wrap: break-word;
+    -webkit-box-orient: vertical;
+    color: #000;
+    display: -webkit-box;
+    font-size: 28rpx;
+    font-weight: 500;
+    height: 72rpx;
+    margin-top: 24rpx;
+    overflow: hidden;
+    width: 294rpx
+}
+
+.scrollHeight .main-view .assessList .assessItem .assess-icon.data-v-6301a217 {
+    height: 64rpx;
+    left: -1rpx;
+    position: absolute;
+    top: 0;
+    width: 64rpx
+}
+
+.scrollHeight .main-view .assessList .no_data .img.data-v-6301a217 {
+    width: 100%
+}
+
+.scrollHeight .main-view .assessList .no_more.data-v-6301a217 {
+    color: #ccc;
+    padding: 30rpx 0;
+    text-align: center;
+    width: 100%
+}

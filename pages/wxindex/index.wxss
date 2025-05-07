@@ -1,0 +1,28 @@
+.content {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.logo {
+    height: 200rpx;
+    margin: 200rpx auto 50rpx;
+    width: 200rpx
+}
+
+.text-area {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center
+}
+
+.title {
+    color: #8f8f94;
+    font-size: 36rpx
+}

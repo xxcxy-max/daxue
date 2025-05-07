@@ -1,0 +1,129 @@
+.maskDialog.data-v-acf65178 {
+    background: #00000066;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 99
+}
+
+.maskDialog .maskBg.data-v-acf65178 {
+    height: 798rpx;
+    left: 50%;
+    position: absolute;
+    top: 348rpx;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 606rpx
+}
+
+.maskDialog .maskBg .maskBgImg.data-v-acf65178 {
+    height: 798rpx;
+    width: 606rpx
+}
+
+.maskDialog .maskBg .infoBox.data-v-acf65178 {
+    background: #fff;
+    border-radius: 16rpx 16rpx 16rpx 16rpx;
+    left: 50%;
+    padding: 20rpx;
+    position: absolute;
+    top: 236rpx;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.maskDialog .maskBg .infoBox .info.data-v-acf65178 {
+    margin-left: 16rpx
+}
+
+.maskDialog .maskBg .infoBox .info .tit.data-v-acf65178 {
+    color: #000;
+    font-size: 26rpx;
+    font-weight: 500;
+    line-height: 31rpx
+}
+
+.maskDialog .maskBg .infoBox .info .statusBox.data-v-acf65178 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 10rpx
+}
+
+.maskDialog .maskBg .infoBox .info .statusBox .icon1.data-v-acf65178 {
+    display: block;
+    height: 32rpx;
+    width: 32rpx
+}
+
+.maskDialog .maskBg .infoBox .info .statusBox .txt.data-v-acf65178 {
+    color: #d14a1f;
+    font-size: 20rpx;
+    font-weight: 400;
+    line-height: 20rpx
+}
+
+.maskDialog .maskBg .infoBox .info .statusBox .icon2.data-v-acf65178 {
+    display: block;
+    height: 24rpx;
+    width: 24rpx
+}
+
+.maskDialog .maskBg .infoBox .info .statusBox .time.data-v-acf65178 {
+    color: #7e8892;
+    font-size: 24rpx;
+    font-weight: 400;
+    line-height: 24rpx
+}
+
+.maskDialog .maskBg .infoBox .imgBox.data-v-acf65178 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    height: 237rpx;
+    -webkit-justify-content: center;
+    justify-content: center;
+    margin-top: 24rpx;
+    overflow: hidden;
+    width: 519rpx
+}
+
+.maskDialog .maskBg .infoBox .imgBox .img.data-v-acf65178 {
+    width: 100%
+}
+
+.maskDialog .maskBg .infoBox .iconl.data-v-acf65178 {
+    display: block;
+    height: 55rpx;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 55rpx
+}
+
+.maskDialog .maskBg .infoBox .iconr.data-v-acf65178 {
+    display: block;
+    height: 36rpx;
+    position: absolute;
+    right: -1rpx;
+    top: 0;
+    width: 128rpx
+}
+
+.maskDialog .maskBg .closeBox.data-v-acf65178 {
+    height: 36rpx;
+    padding: 24rpx 24rpx 32rpx 32rpx;
+    position: absolute;
+    right: 0rpx;
+    top: 0rpx;
+    width: 36rpx
+}
+
+.maskDialog .maskBg .closeBox .closeImg.data-v-acf65178 {
+    height: 36rpx;
+    width: 36rpx
+}

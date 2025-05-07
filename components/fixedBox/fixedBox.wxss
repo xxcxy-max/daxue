@@ -1,0 +1,50 @@
+.fixedBox2.data-v-08365038 {
+    height: 100vh;
+    padding-right: 5px;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 90
+}
+
+.fixedBox2 .fixedBtn2.data-v-08365038 {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px #ccc;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    height: auto;
+    padding: 6px;
+    pointer-events: auto;
+    text-align: center;
+    transition: background-color .3s;
+    width: auto
+}
+
+.fixedBox2 .fixedBtn2 ._a.data-v-08365038 {
+    -webkit-align-items: center;
+    align-items: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    text-decoration: none
+}
+
+.fixedBox2 .fixedBtn2 ._a ._img.data-v-08365038 {
+    height: 48px;
+    width: 48px
+}
+
+.fixedBox2 .fixedBtn2 ._a ._span.data-v-08365038 {
+    color: #8a68ad;
+    font-size: 12px;
+    margin-top: 5px
+}
+
+.fixedBox2 .fixedBtn2 ._a.data-v-08365038:hover,.fixedBox2 .fixedBtn2.data-v-08365038:hover {
+    background-color: #fff
+}

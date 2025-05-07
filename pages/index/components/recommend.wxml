@@ -1,0 +1,295 @@
+<scroll-view bindrefresherrefresh="__e" class="scrollHeight data-v-efe15e36" data-event-opts="{{[ [ 'refresherrefresh',[ [ 'refreshEvent',['$event'] ] ] ] ]}}" refresherEnabled="{{true}}" refresherTriggered="{{triggered}}" scrollY="{{true}}">
+    <view class="center data-v-efe15e36">
+        <view class="bannerView data-v-efe15e36" wx:if="{{show_red}}">
+            <image alt class="banner-image data-v-efe15e36" src="{{$root.m0}}"></image>
+        </view>
+        <view class="stationView data-v-efe15e36">
+            <view bindtap="__e" class="search data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/match/index'] ] ] ] ]}}">
+                <image class="search-image data-v-efe15e36" src="{{$root.m1}}"></image>
+                <view class="num data-v-efe15e36">{{'累计'+jobCount+'个岗位信息'}}</view>
+            </view>
+            <view class="newNum data-v-efe15e36"></view>
+        </view>
+        <view class="data-v-efe15e36">
+            <image bindtap="__e" class="videoShow data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}" src="{{$root.m2}}" wx:if="{{videoShow}}"></image>
+            <view class="videoBox data-v-efe15e36" wx:else>
+                <video class="video data-v-efe15e36" controls="{{true}}" id="myVideo" objectFit="contain" showCenterPlayBtn="{{false}}" showMuteBtn="{{true}}" showProgress="{{true}}" src="{{videoBanner.linkUrl}}"></video>
+                <view bindtap="__e" class="videoShowBox data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'e1',['$event'] ] ] ] ]}}">
+                    <uni-icons bind:__l="__l" class="closeBtn data-v-efe15e36" size="30" type="clear" vueId="efd92266-1"></uni-icons>
+                </view>
+            </view>
+        </view>
+        <view class="navView data-v-efe15e36">
+            <view bindtap="__e" class="navItem data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['$0'],[ [ ['navList','',index,'path'] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="index">
+                <view class="nav-img data-v-efe15e36">
+                    <image class="nav-icon data-v-efe15e36" mode="aspectFill" src="{{item.m3}}"></image>
+                </view>
+                <view class="nav-name data-v-efe15e36">{{item[$orig].name}}</view>
+            </view>
+        </view>
+        <view class="data-v-efe15e36">
+            <swiper autoplay="true" circular="{{true}}" class="swiper data-v-efe15e36" duration="500" indicatorDots="{{$root.g1>1}}" interval="2000" wx:if="{{$root.g0>0}}">
+                <swiper-item class="data-v-efe15e36" wx:for="{{$root.l1}}" wx:key="index">
+                    <view bindtap="__e" class="poster data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pages/wxindex/index?urlapi='+item.m4] ] ] ] ]}}" wx:if="{{item[$orig].linkType==1}}">
+                        <image class="bg-img data-v-efe15e36" mode="aspectFill" src="{{item[$orig].icon}}"></image>
+                    </view>
+                    <view bindtap="__e" class="poster data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['$0'],[ [ ['courseBannerList','',index,'linkUrl'] ] ] ] ] ] ]}}" wx:if="{{item[$orig].linkType==2}}">
+                        <image class="bg-img data-v-efe15e36" mode="aspectFill" src="{{item[$orig].icon}}"></image>
+                    </view>
+                </swiper-item>
+            </swiper>
+            <view class="templateTitle data-v-efe15e36">
+                <image class="{{['data-v-efe15e36',show_red?'show_red':'']}}" src="{{$root.m5}}"></image>
+                <view class="templateTitleView data-v-efe15e36">
+                    <view class="template_left data-v-efe15e36">
+                        <image class="template_icon data-v-efe15e36" mode="aspectFill" src="{{$root.m6}}"></image>
+                        <view class="template_left_tit data-v-efe15e36">课程专区</view>
+                    </view>
+                    <view bindtap="__e" class="template_right data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toTab',[2] ] ] ] ]}}">更多<image class="icon_more data-v-efe15e36" src="{{$root.m7}}"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="course-list data-v-efe15e36">
+                <view bindtap="__e" class="course-item data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/course/curriculum_detail?id='+item[$orig].id] ] ] ] ]}}" wx:for="{{$root.l2}}" wx:key="index">
+                    <view class="course-cover-view data-v-efe15e36">
+                        <image class="course-cover-img data-v-efe15e36" mode="widthFix" src="{{item[$orig].iconUrl}}"></image>
+                        <image class="pricTypeIcon data-v-efe15e36" mode="aspectFill" src="{{item.m8}}" wx:if="{{item[$orig].freeScope==1||item[$orig].freeScope==2}}"></image>
+                    </view>
+                    <view class="course-text-view data-v-efe15e36">
+                        <view class="course-text-name data-v-efe15e36">{{item[$orig].name}}</view>
+                        <view class="course-text-name data-v-efe15e36">{{item[$orig].subtitle}}</view>
+                    </view>
+                    <view class="course-price-view data-v-efe15e36">
+                        <view class="course-price-text data-v-efe15e36" wx:if="{{item[$orig].freeScope==3||item[$orig].freeScope==4}}">
+                            <image class="image data-v-efe15e36" mode="aspectFill" src="{{item.m9}}"></image>
+                            <text class="{{['text','data-v-efe15e36',item[$orig].freeScope==3?'c_Fa911b':'c_C55a5c']}}">{{item[$orig].price}}</text>
+                        </view>
+                        <view class="course-text-number data-v-efe15e36">
+                            <image class="data-v-efe15e36" mode="aspectFill" src="{{$root.m10}}"></image>
+                            <text class="data-v-efe15e36">{{item[$orig].sectionCount+'节课'}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="data-v-efe15e36">
+            <swiper autoplay="true" circular="{{true}}" class="swiper data-v-efe15e36" duration="500" indicatorDots="{{$root.g3>0}}" interval="2000" wx:if="{{$root.g2>0}}">
+                <swiper-item class="data-v-efe15e36" wx:for="{{$root.l3}}" wx:key="index">
+                    <view bindtap="__e" class="poster data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pages/wxindex/index?urlapi='+item.m11] ] ] ] ]}}" wx:if="{{item[$orig].linkType==1}}">
+                        <image class="bg-img data-v-efe15e36" mode="aspectFill" src="{{item[$orig].icon}}"></image>
+                    </view>
+                    <block wx:else>
+                        <view bindtap="__e" class="poster data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['$0'],[ [ ['teacherBannerList','',index,'linkUrl'] ] ] ] ] ] ]}}" wx:if="{{item[$orig].linkType==2}}">
+                            <image class="bg-img data-v-efe15e36" mode="aspectFill" src="{{item[$orig].icon}}"></image>
+                        </view>
+                    </block>
+                </swiper-item>
+            </swiper>
+            <view class="templateTitle data-v-efe15e36">
+                <image class="{{['data-v-efe15e36',show_red?'show_red':'']}}" src="{{$root.m12}}"></image>
+                <view class="templateTitleView data-v-efe15e36">
+                    <view class="template_left data-v-efe15e36">
+                        <image class="template_icon data-v-efe15e36" mode="aspectFill" src="{{$root.m13}}"></image>
+                        <view class="template_left_tit data-v-efe15e36">名师大讲堂</view>
+                    </view>
+                    <view bindtap="__e" class="template_right data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pages/lectureroom/lectureroom','tab'] ] ] ] ]}}">更多<image class="icon_more data-v-efe15e36" src="{{$root.m14}}"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="teacherListView data-v-efe15e36">
+                <swiper autoplay="{{false}}" circular="{{true}}" class="teacherLive data-v-efe15e36" duration="500" indicatorDots="{{$root.g4>1}}" interval="2000">
+                    <swiper-item bindtap="__e" class="swiperItem data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/lectureroom/detail?id='+item[$orig].id] ] ] ] ]}}" wx:for="{{$root.l4}}" wx:key="index">
+                        <view class="teacher-cover data-v-efe15e36">
+                            <image class="teacher-cover-img data-v-efe15e36" mode="aspectFill" src="{{item[$orig].iconUrl?item[$orig].iconUrl:item.m15}}"></image>
+                        </view>
+                        <view class="info data-v-efe15e36">
+                            <view class="tit data-v-efe15e36">{{item[$orig].title}}</view>
+                            <view catchtap="__e" class="statusBox data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'goLive',['$0'],[ [ ['teacherLiveList','',index] ] ] ] ] ] ]}}" wx:if="{{item[$orig].newLiveStatus==2||item[$orig].newLiveStatus==3}}">
+                                <image class="icon1 data-v-efe15e36" src="{{item.m16}}"></image>
+                                <view class="txt data-v-efe15e36">直播中</view>
+                                <image class="icon2 data-v-efe15e36" src="{{item.m17}}"></image>
+                            </view>
+                            <view class="statusBox data-v-efe15e36" wx:else>
+                                <view class="time data-v-efe15e36">{{'开课时间：'+item[$orig].startTime}}</view>
+                            </view>
+                        </view>
+                        <image class="iconl data-v-efe15e36" mode="widthFix" src="{{item.m18}}" wx:if="{{item[$orig].freeScope==0||item[$orig].freeScope==1}}"></image>
+                        <image class="iconl data-v-efe15e36" src="{{item.m19}}" wx:else></image>
+                        <image class="iconr data-v-efe15e36" mode="widthFix" src="{{item.m20}}" wx:if="{{item[$orig].newLiveStatus!=4}}"></image>
+                        <image class="iconr data-v-efe15e36" src="{{item.m21}}" wx:else></image>
+                    </swiper-item>
+                </swiper>
+            </view>
+        </view>
+        <view class="data-v-efe15e36">
+            <view class="templateTitle data-v-efe15e36">
+                <image class="{{['data-v-efe15e36',show_red?'show_red':'']}}" src="{{$root.m22}}"></image>
+                <view class="templateTitleView data-v-efe15e36">
+                    <view class="template_left data-v-efe15e36">
+                        <image class="template_icon data-v-efe15e36" mode="aspectFill" src="{{$root.m23}}"></image>
+                        <view class="template_left_tit data-v-efe15e36">笔试题库</view>
+                    </view>
+                    <view bindtap="__e" class="template_right _div data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toTab',[3,null] ] ] ] ]}}">更多<image class="icon_more _img data-v-efe15e36" src="{{$root.m24}}"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="pencil-list data-v-efe15e36">
+                <view class="pencil-list-view data-v-efe15e36">
+                    <view bindtap="__e" class="pencil-item data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toTab',[3,'10199'] ] ] ] ]}}">
+                        <image class="pencil-img data-v-efe15e36" src="{{$root.m25}}"></image>
+                        <image class="pencil-icon data-v-efe15e36" src="{{$root.m26}}"></image>
+                    </view>
+                    <view bindtap="__e" class="pencil-item data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toTab',[3,'10071'] ] ] ] ]}}">
+                        <image class="pencil-img data-v-efe15e36" src="{{$root.m27}}"></image>
+                        <image class="pencil-icon data-v-efe15e36" src="{{$root.m28}}"></image>
+                    </view>
+                    <view bindtap="__e" class="pencil-item pencil-mt data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toTab',[3,'10151'] ] ] ] ]}}">
+                        <image class="pencil-img data-v-efe15e36" src="{{$root.m29}}"></image>
+                        <image class="pencil-icon data-v-efe15e36" src="{{$root.m30}}"></image>
+                    </view>
+                </view>
+                <view class="pencil-list-view pencil-ml data-v-efe15e36">
+                    <view bindtap="__e" class="pencil-item data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toTab',[3,'10233'] ] ] ] ]}}">
+                        <image class="pencil-img data-v-efe15e36" src="{{$root.m31}}"></image>
+                        <image class="pencil-icon _img data-v-efe15e36" src="{{$root.m32}}"></image>
+                    </view>
+                    <view bindtap="__e" class="pencil-item pencil-mt data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toTab',[3,'10291'] ] ] ] ]}}">
+                        <image class="pencil-right-img pencil-img data-v-efe15e36" src="{{$root.m33}}"></image>
+                        <image class="pencil-icon pencil-right-icon data-v-efe15e36" src="{{$root.m34}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="data-v-efe15e36">
+            <view class="templateTitle data-v-efe15e36">
+                <image class="{{['data-v-efe15e36',show_red?'show_red':'']}}" src="{{$root.m35}}"></image>
+                <view class="templateTitleView data-v-efe15e36">
+                    <view class="template_left data-v-efe15e36">
+                        <image class="template_icon data-v-efe15e36" mode="aspectFill" src="{{$root.m36}}"></image>
+                        <view class="template_left_tit data-v-efe15e36">职业测评</view>
+                    </view>
+                    <view bindtap="__e" class="template_right data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toTab',[4] ] ] ] ]}}">更多<image class="icon_more data-v-efe15e36" src="{{$root.m37}}"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="evaluationView data-v-efe15e36">
+                <view bindtap="__e" class="evaluation-item data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'openEvaluation',['$0','$1'],[ [ ['evaluationList','',index] ],[ ['evaluationList','',index,'linkUrl'] ] ] ] ] ] ]}}" wx:for="{{$root.l5}}" wx:key="index">
+                    <image class="evaluation-image data-v-efe15e36" mode="aspectFill" src="{{item[$orig].coverUrl}}"></image>
+                    <view class="evaluation-title data-v-efe15e36">{{item[$orig].name}}</view>
+                    <image class="evaluation-icons data-v-efe15e36" mode="aspectFill" src="{{item.m38}}"></image>
+                </view>
+            </view>
+        </view>
+        <view class="data-v-efe15e36">
+            <view class="templateTitle data-v-efe15e36">
+                <image class="{{['data-v-efe15e36',show_red?'show_red':'']}}" src="{{$root.m39}}"></image>
+                <view class="templateTitleView data-v-efe15e36">
+                    <view class="template_left data-v-efe15e36">
+                        <image class="template_icon data-v-efe15e36" mode="aspectFill" src="{{$root.m40}}"></image>
+                        <view class="template_left_tit data-v-efe15e36">各行业简历模版</view>
+                    </view>
+                    <view bindtap="__e" class="template_right data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toTab',[5] ] ] ] ]}}">更多<image class="icon_more data-v-efe15e36" src="{{$root.m41}}"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="resumeView data-v-efe15e36">
+                <view bindtap="__e" class="resume-item data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/course/resume_detail?id='+resume[$orig].id] ] ] ] ]}}" wx:for="{{$root.l6}}" wx:for-item="resume" wx:key="index">
+                    <view class="resume-image data-v-efe15e36">
+                        <image class="cover_img data-v-efe15e36" mode="widthFix" src="{{resume[$orig].coverUrl?resume[$orig].coverUrl:resume.m42}}"></image>
+                    </view>
+                    <view class="resume-info data-v-efe15e36">
+                        <view class="resume-title data-v-efe15e36">{{resume[$orig].name}}</view>
+                        <view class="resume-desc data-v-efe15e36">
+                            <view class="resume-con data-v-efe15e36">{{resume[$orig].childCount+'套模板'}}</view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="data-v-efe15e36">
+            <swiper autoplay="true" circular="{{true}}" class="swiper data-v-efe15e36" duration="500" indicatorDots="{{$root.g6>1}}" interval="2000" style="height:400rpx;" wx:if="{{$root.g5>0}}">
+                <swiper-item class="data-v-efe15e36" wx:for="{{$root.l7}}" wx:key="index">
+                    <view bindtap="__e" class="poster data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pages/wxindex/index?urlapi='+item.m43] ] ] ] ]}}" wx:if="{{item[$orig].linkType==1}}">
+                        <image class="bg-img data-v-efe15e36" mode="aspectFill" src="{{item[$orig].icon}}"></image>
+                    </view>
+                    <view bindtap="__e" class="poster data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['$0'],[ [ ['guidanceBannerList','',index,'linkUrl'] ] ] ] ] ] ]}}" wx:if="{{item[$orig].linkType==2}}">
+                        <image class="bg-img data-v-efe15e36" mode="aspectFill" src="{{item[$orig].icon}}"></image>
+                    </view>
+                </swiper-item>
+            </swiper>
+            <view class="templateTitle data-v-efe15e36">
+                <image class="{{['data-v-efe15e36',show_red?'show_red':'']}}" src="{{$root.m44}}"></image>
+                <view class="templateTitleView data-v-efe15e36">
+                    <view class="template_left data-v-efe15e36">
+                        <image class="template_icon data-v-efe15e36" mode="aspectFill" src="{{$root.m45}}"></image>
+                        <view class="template_left_tit data-v-efe15e36">名师指导</view>
+                    </view>
+                    <view bindtap="__e" class="template_right data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/teacher/index'] ] ] ] ]}}">更多<image class="icon_more data-v-efe15e36" src="{{$root.m46}}"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="guidance-view data-v-efe15e36">
+                <scroll-view class="guidance-list data-v-efe15e36" scrollX="{{true}}">
+                    <view bindtap="__e" class="guidance-item data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/teacher/detail?id='+item[$orig].id] ] ] ] ]}}" wx:for="{{$root.l8}}" wx:key="index">
+                        <image class="guidance-teacher-image data-v-efe15e36" mode="aspectFill" src="{{item[$orig].headUrl?item.m47:item.m48}}"></image>
+                        <view class="guidance-info data-v-efe15e36">
+                            <view class="guidance-name data-v-efe15e36">{{item[$orig].teacherName}}</view>
+                            <view class="guidance-tips data-v-efe15e36">高级求职讲师</view>
+                        </view>
+                    </view>
+                </scroll-view>
+            </view>
+        </view>
+        <view class="data-v-efe15e36">
+            <view class="templateTitle data-v-efe15e36">
+                <image class="{{['data-v-efe15e36',show_red?'show_red':'']}}" src="{{$root.m49}}"></image>
+                <view class="templateTitleView data-v-efe15e36">
+                    <view class="template_left data-v-efe15e36">
+                        <image class="template_icon data-v-efe15e36" mode="aspectFill" src="{{$root.m50}}"></image>
+                        <view class="template_left_tit data-v-efe15e36">合作企业</view>
+                    </view>
+                    <view bindtap="__e" class="template_right data-v-efe15e36" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/referral/index'] ] ] ] ]}}">更多<image class="icon_more data-v-efe15e36" src="{{$root.m51}}"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="enterprise-view data-v-efe15e36">
+                <view bindtap="__e" class="{{['data-v-efe15e36',$root.g7-1==index?'enterprise-item enterprise-items':'enterprise-item']}}" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/referral/detail?id='+item[$orig].id] ] ] ] ]}}" wx:for="{{$root.l9}}" wx:key="index">
+                    <view class="enterprise-img data-v-efe15e36">
+                        <image class="logo data-v-efe15e36" mode="aspectFit" src="{{item[$orig].logUrl?item.m52:item.m53}}"></image>
+                    </view>
+                    <view class="enterprise-info data-v-efe15e36">
+                        <view class="enterprise-name data-v-efe15e36">{{item[$orig].enterpriseName}}</view>
+                        <view class="enterprise-tags data-v-efe15e36">
+                            <view class="enterprise-tag-item data-v-efe15e36">{{''+(item[$orig].jobCount==0?'若干':item[$orig].jobCount+'个')+'\n\t\t\t\t\t\t\t\t推荐岗位'}}</view>
+                            <view class="enterprise-tag-item enterprise-tag-tips data-v-efe15e36" wx:if="{{item[$orig].mark}}">{{item[$orig].mark}}</view>
+                        </view>
+                        <view class="enterprise-time data-v-efe15e36" wx:if="{{item[$orig].deliveryStartTime}}">{{'投递时间：'+item.m54+'~'+item.m55}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="data-v-efe15e36" style="display:none;">
+            <view class="templateTitle data-v-efe15e36">
+                <image class="{{['data-v-efe15e36',show_red?'show_red':'']}}" src="{{$root.m56}}"></image>
+                <view class="templateTitleView data-v-efe15e36">
+                    <view class="template_left data-v-efe15e36">
+                        <image class="template_icon data-v-efe15e36" mode="aspectFill" src="{{$root.m57}}"></image>
+                        <view class="template_left_tit data-v-efe15e36">赋能高校</view>
+                    </view>
+                </view>
+            </view>
+            <view class="school-view data-v-efe15e36">
+                <swiper autoplay="{{false}}" circular="{{true}}" class="schoolSwiper data-v-efe15e36" duration="500" indicatorDots="{{$root.g8>8}}" interval="2000">
+                    <swiper-item class="swiperItem data-v-efe15e36" wx:for="{{schoolList}}" wx:key="index">
+                        <view class="schoolList data-v-efe15e36">
+                            <view class="schoolItem data-v-efe15e36" wx:for="{{item}}" wx:for-index="inden" wx:for-item="iten" wx:key="inden">
+                                <view class="img data-v-efe15e36"></view>
+                                <view class="txt data-v-efe15e36">{{iten.name}}</view>
+                            </view>
+                        </view>
+                    </swiper-item>
+                </swiper>
+            </view>
+        </view>
+    </view>
+</scroll-view>

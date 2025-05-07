@@ -1,0 +1,14 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-nav-bar": "pages\\index\\uni_modules\\uni-nav-bar\\components\\uni-nav-bar\\uni-nav-bar",
+    "fixed-box": "pages\\index\\components\\fixedBox\\fixedBox",
+    "live-dialog": "pages\\index\\components\\liveDialog\\liveDialog",
+    "recommend": "pages\\index\\pages\\index\\components\\recommend",
+    "intelligence": "pages\\index\\pages\\index\\components\\intelligence",
+    "course": "pages\\index\\pages\\index\\components\\course",
+    "subject": "pages\\index\\pages\\index\\components\\subject",
+    "assess": "pages\\index\\pages\\index\\components\\assess",
+    "biographical-notes": "pages\\index\\pages\\index\\components\\biographicalNotes"
+  }
+}

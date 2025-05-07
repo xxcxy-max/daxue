@@ -1,0 +1,77 @@
+.container {
+    padding: 20rpx
+}
+
+.container .w-header-wrapper {
+    border-bottom: 1px solid #2c92f4;
+    font-size: 4.533vw;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -999
+}
+
+.container .qrcode1 {
+    overflow: hidden;
+    position: relative
+}
+
+.container .qrcode1 .qrcode2 {
+    width: 300%
+}
+
+.container .qrcode1 .qrcode2 ._img {
+    float: left;
+    position: relative;
+    width: 33.33%
+}
+
+.container .qrcode1 .qrcode2 .image_left {
+    left: -33.33%
+}
+
+.container .qrcode1 .qrcode2 .image_left1 {
+    left: -66.66%
+}
+
+.container .qrcode1 .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-user-select: none;
+    user-select: none
+}
+
+.container .qrcode1 .arrow ._img {
+    height: 100rpx;
+    width: 100rpx
+}
+
+.container .qrcode1 .arrow-left {
+    left: 10px
+}
+
+.container .qrcode1 .arrow-right {
+    right: 10px
+}
+
+.container .qrcode1 .image_left {
+    left: -33.33%
+}
+
+.container .qrcode1 .image_left1 {
+    left: -66.66%
+}
+
+.container .options {
+    border: none;
+    border-top: 0 solid #d6d6d6;
+    font-size: 13px;
+    height: 47px;
+    line-height: 47px;
+    text-align: center
+}

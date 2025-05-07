@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "bottom-loading": "pages\\index\\components\\components\\bottomLoading\\bottomLoading"
+  }
+}

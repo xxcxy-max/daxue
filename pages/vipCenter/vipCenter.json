@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "会员专区",
+  "usingComponents": {
+    "fixed-box": "pages\\vipCenter\\components\\fixedBox\\fixedBox"
+  }
+}

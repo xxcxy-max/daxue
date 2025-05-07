@@ -1,0 +1,10 @@
+<view class="data-v-08365038">
+    <movable-area class="fixedBox2 data-v-08365038">
+        <movable-view bindchange="__e" class="fixedBtn2 data-v-08365038" data-event-opts="{{[ [ 'change',[ [ 'fixedBoxChange',['$event'] ] ] ] ]}}" direction="all" x="{{x}}" y="{{y}}">
+            <navigator bindtap="__e" class="_a data-v-08365038" data-event-opts="{{[ [ 'tap',[ [ 'fixedBoxClick',['$event'] ] ] ] ]}}">
+                <image alt="客服图标" class="_img data-v-08365038" src="{{$root.m0}}"></image>
+                <label class="_span data-v-08365038">在线导师</label>
+            </navigator>
+        </movable-view>
+    </movable-area>
+</view>

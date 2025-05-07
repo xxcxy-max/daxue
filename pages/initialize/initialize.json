@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "个人信息",
+  "usingComponents": {
+    "city-picker": "pages\\initialize\\uni_modules\\piaoyi-cityPicker\\components\\piaoyi-cityPicker\\piaoyi-cityPicker"
+  }
+}

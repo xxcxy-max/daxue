@@ -1,0 +1,20 @@
+<view class="pupop data-v-37587c8a">
+    <view animation="{{animationData}}" class="popup-box data-v-37587c8a">
+        <view class="pupop-btn data-v-37587c8a">
+            <view bindtap="__e" class="data-v-37587c8a" data-event-opts="{{[ [ 'tap',[ [ 'cancel',['$event'] ] ] ] ]}}">取消</view>
+            <view bindtap="__e" class="data-v-37587c8a" data-event-opts="{{[ [ 'tap',[ [ 'confirm',['$event'] ] ] ] ]}}" style="color:#2979ff;">确定</view>
+        </view>
+        <picker-view bindchange="__e" class="picker-view data-v-37587c8a" data-event-opts="{{[ [ 'change',[ [ 'bindChange',['$event'] ] ] ] ]}}" indicatorStyle="{{indicatorStyle}}" value="{{value}}">
+            <picker-view-column class="data-v-37587c8a">
+                <view class="item data-v-37587c8a" wx:for="{{provinceList}}" wx:key="index">{{item.name}}</view>
+            </picker-view-column>
+            <picker-view-column class="data-v-37587c8a">
+                <view class="item data-v-37587c8a" wx:for="{{cityList}}" wx:key="index">{{item.name}}</view>
+            </picker-view-column>
+            <picker-view-column class="data-v-37587c8a" wx:if="{{column==3}}">
+                <view class="item data-v-37587c8a" wx:for="{{areaList}}" wx:key="index">{{item.name}}</view>
+            </picker-view-column>
+        </picker-view>
+    </view>
+    <view bindtap="__e" catchtouchmove="__e" class="{{['data-v-37587c8a',visible?'pupop-model':'pupop-models']}}" data-event-opts="{{[ [ 'tap',[ [ 'close',['$event'] ] ] ],[ 'touchmove',[ [ '',['$event'] ] ] ] ]}}"></view>
+</view>

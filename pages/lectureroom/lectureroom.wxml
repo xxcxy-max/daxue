@@ -1,0 +1,65 @@
+<view class="container data-v-42168dba">
+    <image class="topImg _img data-v-42168dba" src="{{$root.m0}}"></image>
+    <view class="center data-v-42168dba">
+        <view class="tagBox data-v-42168dba">
+            <view class="left data-v-42168dba">
+                <image class="img1 _img data-v-42168dba" src="{{$root.m1}}"></image>
+                <image class="img2 _img data-v-42168dba" src="{{$root.m2}}"></image>
+            </view>
+            <view class="right data-v-42168dba">
+                <view bindtap="__e" class="{{['tag1','data-v-42168dba',tabShow?'action':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'changeTab',[true] ] ] ] ]}}">进行中</view>
+                <view bindtap="__e" class="{{['tag2','data-v-42168dba',tabShow?'':'action']}}" data-event-opts="{{[ [ 'tap',[ [ 'changeTab',[false] ] ] ] ]}}">未开始</view>
+            </view>
+        </view>
+        <view class="content data-v-42168dba" wx:if="{{tabShow}}">
+            <view class="list data-v-42168dba">
+                <view bindtap="__e" class="item data-v-42168dba" data-event-opts="{{[ [ 'tap',[ [ 'goDetail',['$0'],[ [ ['roomList','',index,'id'] ] ] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="index">
+                    <view class="info data-v-42168dba">
+                        <view class="tit data-v-42168dba">{{item[$orig].title}}</view>
+                        <view catchtap="__e" class="statusBox data-v-42168dba" data-event-opts="{{[ [ 'tap',[ [ 'goLive',['$0'],[ [ ['roomList','',index] ] ] ] ] ] ]}}" wx:if="{{item[$orig].newLiveStatus==2||item[$orig].newLiveStatus==3}}">
+                            <image class="icon1 _img data-v-42168dba" src="{{item.m3}}"></image>
+                            <view class="txt data-v-42168dba">直播中</view>
+                            <image class="icon2 _img data-v-42168dba" src="{{item.m4}}"></image>
+                        </view>
+                        <view class="statusBox data-v-42168dba" wx:else>
+                            <view class="time data-v-42168dba">{{'开课时间：'+item[$orig].startTime}}</view>
+                        </view>
+                    </view>
+                    <view class="imgBox data-v-42168dba">
+                        <image class="img _img data-v-42168dba" mode="widthFix" src="{{item[$orig].iconUrl?item[$orig].iconUrl:item.m5}}"></image>
+                    </view>
+                    <image class="iconl _img data-v-42168dba" src="{{item.m6}}" wx:if="{{item[$orig].freeScope==0||item[$orig].freeScope==1}}"></image>
+                    <image class="iconl _img data-v-42168dba" src="{{item.m7}}" wx:else></image>
+                    <image class="iconr _img data-v-42168dba" src="{{item.m8}}" wx:if="{{item[$orig].newLiveStatus!=4}}"></image>
+                    <image class="iconr _img data-v-42168dba" src="{{item.m9}}" wx:else></image>
+                </view>
+            </view>
+        </view>
+        <block wx:else>
+            <view class="content2 data-v-42168dba" wx:if="{{$root.g0>0}}">
+                <view class="list data-v-42168dba">
+                    <view class="item data-v-42168dba" wx:for="{{$root.l2}}" wx:key="index">
+                        <view class="titBox data-v-42168dba">
+                            <image class="titIcon _img data-v-42168dba" src="{{item.m10}}"></image>
+                            <view class="time data-v-42168dba">{{item[$orig].name}}</view>
+                        </view>
+                        <view class="{{['itemContent','data-v-42168dba',index+1==total?'noBorder':'']}}">
+                            <view class="contentList data-v-42168dba">
+                                <view class="contentListItem data-v-42168dba" wx:for="{{item.l1}}" wx:for-index="index1" wx:for-item="item1" wx:key="index1">{{''+item1[$orig].title+''}}<image class="iconl _img data-v-42168dba" src="{{item1.m11}}"></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <bottom-loading bind:__l="__l" bind:input="__e" class="data-v-42168dba" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','isLoading','$event',[] ] ] ] ] ]}}" value="{{isLoading}}" vueId="00bbaa8c-1"></bottom-loading>
+            </view>
+        </block>
+        <center-loading bind:__l="__l" bind:input="__e" class="data-v-42168dba" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','isLoading2','$event',[] ] ] ] ] ]}}" value="{{isLoading2}}" vueId="00bbaa8c-2"></center-loading>
+        <bottom-loading bind:__l="__l" bind:input="__e" class="data-v-42168dba" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','isLoading','$event',[] ] ] ] ] ]}}" value="{{isLoading}}" vueId="00bbaa8c-3"></bottom-loading>
+        <view class="no_data data-v-42168dba" wx:if="{{noDataShow}}">
+            <image class="_img data-v-42168dba" mode="widthFix" src="{{$root.m12}}"></image>
+        </view>
+        <view class="no_more data-v-42168dba" wx:if="{{noMoreShow}}">没有更多了...</view>
+    </view>
+    <fixed-box bind:__l="__l" class="data-v-42168dba" vueId="00bbaa8c-4"></fixed-box>
+</view>

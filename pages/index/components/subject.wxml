@@ -1,0 +1,30 @@
+<scroll-view bindrefresherrefresh="__e" bindscrolltolower="__e" class="scrollHeight data-v-deecf1ee" data-event-opts="{{[ [ 'refresherrefresh',[ [ 'refreshEvent',['$event'] ] ] ],[ 'scrolltolower',[ [ 'tolowerEvent',['$event'] ] ] ] ]}}" refresherThreshold="{{true}}" refresherTriggered="{{triggered}}" scrollY="true">
+    <view class="main-view data-v-deecf1ee">
+        <image class="banner data-v-deecf1ee" mode="widthFix" src="{{$root.m0}}"></image>
+        <scroll-view class="navList data-v-deecf1ee" scrollX="{{true}}">
+            <view bindtap="__e" class="{{['navItem','data-v-deecf1ee',parentId==item[$orig].id?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navEvent',['$0'],[ [ ['navList','',index] ] ] ] ] ] ]}}" id="{{'nav'+item[$orig].id}}" wx:for="{{$root.l0}}" wx:key="index">
+                <view class="navName data-v-deecf1ee">{{item[$orig].name}}</view>
+                <image class="navIcon data-v-deecf1ee" mode="widthFix" src="{{item.m1}}" wx:if="{{parentId==item[$orig].id}}"></image>
+            </view>
+        </scroll-view>
+        <view class="subject-view data-v-deecf1ee">
+            <view bindtap="__e" class="subject-item data-v-deecf1ee" data-event-opts="{{[ [ 'tap',[ [ 'toDetail',['$0'],[ [ ['subjectList','',index] ] ] ] ] ] ]}}" wx:for="{{$root.l1}}" wx:key="index">
+                <view class="subject-cover data-v-deecf1ee">
+                    <image class="subject-img data-v-deecf1ee" mode="aspectFill" src="{{item[$orig].coverUrl?item[$orig].coverUrl:item.m2}}"></image>
+                </view>
+                <view class="subject-info data-v-deecf1ee">
+                    <view class="title data-v-deecf1ee">{{item[$orig].name}}</view>
+                    <view class="total data-v-deecf1ee" wx:if="{{item[$orig].isDir==1}}">{{item[$orig].childCount+'套题库'}}</view>
+                </view>
+                <image class="subject-icon data-v-deecf1ee" mode="widthFix" src="{{$root.m3}}"></image>
+                <image class="vip-icon data-v-deecf1ee" mode="widthFix" src="{{item.m4}}" wx:if="{{(item[$orig].freeScope==1||item[$orig].freeScope==0)&&item[$orig].isDir==0}}"></image>
+                <image class="vip-icon data-v-deecf1ee" mode="widthFix" src="{{item.m5}}" wx:if="{{item[$orig].freeScope==2&&item[$orig].isDir==0}}"></image>
+            </view>
+            <bottom-loading bind:__l="__l" bind:input="__e" class="data-v-deecf1ee" data-event-opts="{{[ [ '^input',[ [ '__set_model',[ '','isLoading','$event',[] ] ] ] ] ]}}" value="{{isLoading}}" vueId="feb049c6-1"></bottom-loading>
+            <view class="no_data data-v-deecf1ee" wx:if="{{$root.g0==0}}">
+                <image class="null-img data-v-deecf1ee" mode="widthFix" src="{{$root.m6}}"></image>
+            </view>
+            <view class="no_more data-v-deecf1ee" wx:if="{{$root.g1}}">没有更多了...</view>
+        </view>
+    </view>
+</scroll-view>

@@ -1,0 +1,18 @@
+<view class="container">
+    <view class="qrcode1" wx:if="{{$root.g0>0}}">
+        <view class="qrcode2">
+            <image bindlongpress="__e" class="img" data-event-opts="{{[ [ 'longpress',[ [ 'longPress',['$0'],['imageList.'+currentIndex+''] ] ] ] ]}}" mode="widthFix" src="{{imageList[currentIndex]}}"></image>
+        </view>
+        <view bindtap="__e" class="arrow arrow-left" data-event-opts="{{[ [ 'tap',[ [ 'slideLeft',['$event'] ] ] ] ]}}">
+            <image class="_img" src="{{$root.m0}}"></image>
+        </view>
+        <view bindtap="__e" class="arrow arrow-right" data-event-opts="{{[ [ 'tap',[ [ 'slideRight',['$event'] ] ] ] ]}}">
+            <image class="_img" src="{{$root.m1}}"></image>
+        </view>
+    </view>
+    <view class="options" wx:if="{{$root.g1>0}}">
+        <navigator class="online-cc _a">
+            <label class="_span" style="color:#fff;">↑↑↑ 长按上方图片保存分享 ↑↑↑</label>
+        </navigator>
+    </view>
+</view>

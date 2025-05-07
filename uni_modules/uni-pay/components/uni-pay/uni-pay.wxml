@@ -1,0 +1,75 @@
+<view class="uni-pay data-v-1f87f297">
+    <uni-popup bind:__l="__l" class="data-v-1f87f297 vue-ref" data-ref="payPopup" safeArea="{{false}}" type="center" vueId="5d123d62-1" vueSlots="{{['default']}}" wx:if="{{modeCom==='pc'}}">
+        <view class="pc-pay-popup data-v-1f87f297">
+            <view class="pc-pay-popup-title data-v-1f87f297">收银台</view>
+            <view class="pc-pay-popup-flex data-v-1f87f297">
+                <view class="pc-pay-popup-qrcode-box data-v-1f87f297">
+                    <image class="pc-pay-popup-qrcode-image data-v-1f87f297" src="{{res.qr_code_image}}"></image>
+                    <view class="pc-pay-popup-amount-box data-v-1f87f297">
+                        <view class="pc-pay-popup-amount-tips data-v-1f87f297">扫一扫付款</view>
+                        <view class="pc-pay-popup-amount data-v-1f87f297">{{$root.g0}}</view>
+                    </view>
+                    <view class="pc-pay-popup-complete-button data-v-1f87f297" wx:if="{{res.qr_code_image}}">
+                        <button bindtap="__e" class="data-v-1f87f297" data-event-opts="{{[ [ 'tap',[ ['_getOrder'] ] ] ]}}" type="primary">我已完成支付</button>
+                    </view>
+                </view>
+                <view class="pc-pay-popup-provider-list data-v-1f87f297">
+                    <view bindtap="__e" class="{{['pc-pay-popup-provider-item','data-v-1f87f297',options.provider=='wxpay'?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ '_pcChooseProvider',['wxpay'] ] ] ] ]}}" wx:if="{{$root.g1>-1}}">
+                        <image class="pc-pay-popup-provider-image data-v-1f87f297" src="{{images.wxpay}}"></image>
+                        <text class="pc-pay-popup-provider-text data-v-1f87f297">微信支付</text>
+                    </view>
+                    <view bindtap="__e" class="{{['pc-pay-popup-provider-item','data-v-1f87f297',options.provider=='alipay'?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ '_pcChooseProvider',['alipay'] ] ] ] ]}}" wx:if="{{$root.g2>-1}}">
+                        <image class="pc-pay-popup-provider-image data-v-1f87f297" src="{{images.alipay}}"></image>
+                        <text class="pc-pay-popup-provider-text data-v-1f87f297">支付宝支付</text>
+                    </view>
+                    <view class="pc-pay-popup-logo data-v-1f87f297">
+                        <image class="data-v-1f87f297" mode="widthFix" src="{{logo}}"></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </uni-popup>
+    <uni-popup bind:__l="__l" class="data-v-1f87f297 vue-ref" data-ref="payPopup" safeArea="{{false}}" type="bottom" vueId="5d123d62-2" vueSlots="{{['default']}}" wx:else>
+        <view class="mobile-pay-popup data-v-1f87f297" style="{{'min-height: '+height+';'}}">
+            <view class="mobile-pay-popup-title data-v-1f87f297">收银台</view>
+            <view class="mobile-pay-popup-amount-box data-v-1f87f297">
+                <view class="data-v-1f87f297">待支付金额：</view>
+                <view class="mobile-pay-popup-amount data-v-1f87f297">{{$root.g3}}</view>
+            </view>
+            <view class="mobile-pay-popup-provider-list data-v-1f87f297">
+                <uni-list bind:__l="__l" class="data-v-1f87f297" vueId="{{'5d123d62-3'+','+'5d123d62-2'}}" vueSlots="{{['default']}}">
+                    <uni-list-item bind:__l="__l" bind:click="__e" class="data-v-1f87f297" clickable="{{true}}" data-event-opts="{{[ [ '^click',[ [ 'createOrder',[ [ 'o',['provider','wxpay'] ] ] ] ] ] ]}}" link="{{true}}" thumb="{{images.wxpay}}" title="微信支付" vueId="{{'5d123d62-4'+','+'5d123d62-3'}}" wx:if="{{$root.g4>-1}}"></uni-list-item>
+                </uni-list>
+            </view>
+        </view>
+    </uni-popup>
+    <uni-popup animation="{{false}}" bind:__l="__l" bind:close="__e" class="data-v-1f87f297 vue-ref" data-event-opts="{{[ [ '^close',[ ['clearQrcode'] ] ] ]}}" data-ref="qrcodePopup" maskClick="{{false}}" safeArea="{{false}}" type="center" vueId="5d123d62-5" vueSlots="{{['default']}}">
+        <view class="qrcode-popup-content data-v-1f87f297">
+            <image class="qrcode-image data-v-1f87f297" src="{{res.qr_code_image}}"></image>
+            <view class="qrcode-popup-info data-v-1f87f297">
+                <view class="data-v-1f87f297">
+                    <text class="qrcode-popup-info-fee data-v-1f87f297">{{$root.g5}}</text>
+                    <text class="data-v-1f87f297">元</text>
+                </view>
+                <view class="data-v-1f87f297" wx:if="{{options.provider=='wxpay'}}">请用微信扫码支付</view>
+                <block wx:else>
+                    <view class="data-v-1f87f297" wx:if="{{options.provider=='alipay'}}">请用支付宝扫码支付</view>
+                </block>
+            </view>
+            <button bindtap="__e" class="data-v-1f87f297" data-event-opts="{{[ [ 'tap',[ ['_getOrder'] ] ] ]}}" type="primary">我已完成支付</button>
+            <view bindtap="__e" class="qrcode-popup-cancel data-v-1f87f297" data-event-opts="{{[ [ 'tap',[ [ 'closePopup',['qrcodePopup'] ] ] ] ]}}">暂不支付</view>
+        </view>
+    </uni-popup>
+    <uni-popup animation="{{false}}" bind:__l="__l" class="data-v-1f87f297 vue-ref" data-ref="payConfirmPopup" maskClick="{{false}}" safeArea="{{false}}" type="center" vueId="5d123d62-6" vueSlots="{{['default']}}">
+        <view class="pay-confirm-popup-content data-v-1f87f297">
+            <view class="pay-confirm-popup-title data-v-1f87f297">请确认支付是否已完成</view>
+            <view class="data-v-1f87f297">
+                <button bindtap="__e" class="data-v-1f87f297" data-event-opts="{{[ [ 'tap',[ ['_getOrder'] ] ] ]}}" type="primary">已完成支付</button>
+            </view>
+            <view class="pay-confirm-popup-refresh data-v-1f87f297">
+                <button bindtap="__e" class="data-v-1f87f297" data-event-opts="{{[ [ 'tap',[ ['_afreshPayment'] ] ] ]}}" type="default">支付遇到问题，重新支付</button>
+            </view>
+            <view bindtap="__e" class="pay-confirm-popup-cancel data-v-1f87f297" data-event-opts="{{[ [ 'tap',[ [ 'closePopup',['payConfirmPopup'] ] ] ] ]}}">暂不支付</view>
+        </view>
+    </uni-popup>
+</view>

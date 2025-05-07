@@ -1,0 +1,44 @@
+<view class="data-v-b237504c">
+    <image class="login_img _img data-v-b237504c" src="{{$root.m0}}"></image>
+    <view class="conter data-v-b237504c">
+        <uni-forms bind:__l="__l" class="data-v-b237504c vue-ref" data-ref="valiForm" modelValue="{{valiFormData}}" rules="{{rules}}" vueId="35a7246c-1" vueSlots="{{['default']}}">
+            <uni-forms-item bind:__l="__l" class="form-item data-v-b237504c" name="phone" vueId="{{'35a7246c-2'+','+'35a7246c-1'}}" vueSlots="{{['default']}}" wx:if="{{!loginSwitch}}">
+                <view class="inp_box data-v-b237504c">
+                    <input bindinput="__e" class="inp data-v-b237504c" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','phone','$event',[] ],['valiFormData'] ] ] ] ]}}" maxlength="11" placeholder="请输入手机号" type="tel" value="{{valiFormData.phone}}"></input>
+                </view>
+            </uni-forms-item>
+            <uni-forms-item bind:__l="__l" class="form-item data-v-b237504c" name="code" vueId="{{'35a7246c-3'+','+'35a7246c-1'}}" vueSlots="{{['default']}}" wx:if="{{!loginSwitch}}">
+                <view class="inp_box code_box data-v-b237504c">
+                    <input bindinput="__e" class="inp data-v-b237504c" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','code','$event',[] ],['valiFormData'] ] ] ] ]}}" maxlength="6" placeholder="请输入验证码" type="number" value="{{valiFormData.code}}"></input>
+                    <view bindtap="__e" class="code data-v-b237504c" data-event-opts="{{[ [ 'tap',[ [ 'saveUserInfo',['$event'] ] ] ] ]}}">{{timeOrTxt}}</view>
+                </view>
+            </uni-forms-item>
+            <uni-forms-item bind:__l="__l" class="form-item data-v-b237504c" name="username" vueId="{{'35a7246c-4'+','+'35a7246c-1'}}" vueSlots="{{['default']}}" wx:if="{{loginSwitch}}">
+                <view class="inp_box data-v-b237504c">
+                    <input bindinput="__e" class="inp data-v-b237504c" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','username','$event',[] ],['valiFormData'] ] ] ] ]}}" placeholder="请输入账号" value="{{valiFormData.username}}"></input>
+                </view>
+            </uni-forms-item>
+            <uni-forms-item bind:__l="__l" class="form-item data-v-b237504c" name="password" vueId="{{'35a7246c-5'+','+'35a7246c-1'}}" vueSlots="{{['default']}}" wx:if="{{loginSwitch}}">
+                <view class="inp_box psw_box data-v-b237504c">
+                    <input bindinput="__e" class="inp data-v-b237504c" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','password','$event',[] ],['valiFormData'] ] ] ] ]}}" placeholder="请输入密码" type="password" value="{{valiFormData.password}}" wx:if="{{!pswShow}}"></input>
+                    <input bindinput="__e" class="inp data-v-b237504c" data-event-opts="{{[ [ 'input',[ [ '__set_model',[ '$0','password','$event',[] ],['valiFormData'] ] ] ] ]}}" placeholder="请输入密码" type="text" value="{{valiFormData.password}}" wx:else></input>
+                    <view bindtap="__e" class="pswShowBtnBox data-v-b237504c" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}">
+                        <image class="pswShowBtn _img data-v-b237504c" src="{{pswShow?$root.m1:$root.m2}}"></image>
+                    </view>
+                </view>
+            </uni-forms-item>
+            <uni-forms-item bind:__l="__l" class="data-v-b237504c" vueId="{{'35a7246c-6'+','+'35a7246c-1'}}" vueSlots="{{['default']}}">
+                <view class="radio data-v-b237504c">
+                    <image bindtap="__e" class="radioBtn _img data-v-b237504c" data-event-opts="{{[ [ 'tap',[ [ 'e1',['$event'] ] ] ] ]}}" src="{{radioBtnShow?$root.m3:$root.m4}}"></image>
+                    <label bindtap="__e" class="_span data-v-b237504c" data-event-opts="{{[ [ 'tap',[ [ 'e2',['$event'] ] ] ] ]}}" style="margin-left:4rpx;">已阅读并同意</label>
+                    <label bindtap="__e" class="_span data-v-b237504c" data-event-opts="{{[ [ 'tap',[ [ 'url',['/pages/privacy/index?article_id=38&url='+$root.m5+'&type='+reType] ] ] ] ]}}" style="color:#2c8cfe;">《用户协议》</label>和<label bindtap="__e" class="_span data-v-b237504c" data-event-opts="{{[ [ 'tap',[ [ 'url',['/pages/privacy/index?article_id=36&url='+$root.m6+'&type='+reType] ] ] ] ]}}" style="color:#2c8cfe;">《隐私政策》</label>
+                    <label class="_span data-v-b237504c">.</label>
+                </view>
+            </uni-forms-item>
+        </uni-forms>
+        <view class="btn-view data-v-b237504c">
+            <view bindtap="__e" class="loginBtn data-v-b237504c" data-event-opts="{{[ [ 'tap',[ [ 'submit',['valiForm'] ] ] ] ]}}" style="{{'background:'+(radioBtnShow?'#2C8CFE':'#D8DDE1')+';'}}">立即登录</view>
+            <view bindtap="__e" class="switchBtn data-v-b237504c" data-event-opts="{{[ [ 'tap',[ [ 'switchBtnClick',['$event'] ] ] ] ]}}">{{''+(loginSwitch?'验证码登录/注册':'密码登录')+''}}</view>
+        </view>
+    </view>
+</view>

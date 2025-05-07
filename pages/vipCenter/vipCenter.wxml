@@ -1,0 +1,55 @@
+<view class="container _div data-v-98411b28">
+    <view class="center _div data-v-98411b28">
+        <image bindtap="__e" class="img_top _img data-v-98411b28" data-event-opts="{{[ [ 'tap',[ [ 'toPage',[vipFlag?'/pagesA/pages/match/index':'/pagesA/pages/pay/userpay'] ] ] ] ]}}" src="{{$root.m0}}"></image>
+        <view class="nav _div data-v-98411b28">
+            <view bindtap="__e" class="{{['nav_item','_div','data-v-98411b28',navNum==index?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'navSwitchFn',[index] ] ] ] ]}}" wx:for="{{navList}}" wx:key="index">{{''+item+''}}</view>
+        </view>
+        <view class="questionList _div data-v-98411b28" wx:if="{{$root.g0}}">
+            <view bindtap="__e" class="questionItem _div data-v-98411b28" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/course/curriculum_detail?id='+item[$orig].id] ] ] ] ]}}" wx:for="{{$root.l0}}" wx:key="index">
+                <view class="imgBox data-v-98411b28">
+                    <image class="questionImg _img data-v-98411b28" src="{{item[$orig].iconUrl}}" wx:if="{{item[$orig].iconUrl}}"></image>
+                    <image class="questionImg _img data-v-98411b28" src="{{item.m1}}" wx:else></image>
+                    <image class="icon_img _img data-v-98411b28" src="{{item.m2}}" wx:if="{{item[$orig].freeScope==1}}"></image>
+                    <image class="icon_img _img data-v-98411b28" src="{{item.m3}}" wx:if="{{item[$orig].freeScope==2}}"></image>
+                </view>
+                <view class="questionText _div data-v-98411b28">
+                    <view class="txt1 _div data-v-98411b28">{{item[$orig].name}}</view>
+                    <view class="txt2 _div data-v-98411b28">{{item[$orig].subtitle}}</view>
+                    <view class="txt3 _div data-v-98411b28">
+                        <image class="icon _img data-v-98411b28" src="{{item.m4}}"></image>{{''+item[$orig].sectionCount+'节课'}}</view>
+                </view>
+            </view>
+        </view>
+        <view class="evaluatingList _div data-v-98411b28" wx:if="{{$root.g1}}">
+            <view bindtap="__e" class="evaluatingItem _div data-v-98411b28" data-event-opts="{{[ [ 'tap',[ [ 'openEva',['$0','$1'],[ [ ['evaList','',index] ],[ ['evaList','',index,'linkUrl'] ] ] ] ] ] ]}}" wx:for="{{$root.l1}}" wx:key="index">
+                <view class="evaluatingImgBox data-v-98411b28">
+                    <image class="evaluatingImg _img data-v-98411b28" mode="heightFix" src="{{item[$orig].coverUrl?item[$orig].coverUrl:item.m5}}"></image>
+                </view>
+                <view class="evaluatingText _div data-v-98411b28">{{''+item[$orig].name+''}}</view>
+                <image class="icon_img _img data-v-98411b28" src="{{item.m6}}" wx:if="{{item[$orig].freeScope==0||item[$orig].freeScope==1}}"></image>
+                <image class="icon_img _img data-v-98411b28" src="{{item.m7}}" wx:if="{{item[$orig].freeScope==2}}"></image>
+            </view>
+        </view>
+        <view class="curriculumList _div data-v-98411b28" wx:if="{{$root.g2}}">
+            <view bindtap="__e" class="curriculumItem _div data-v-98411b28" data-event-opts="{{[ [ 'tap',[ [ 'openCurr',['$0'],[ [ ['questionList','',index] ] ] ] ] ] ]}}" wx:for="{{$root.l2}}" wx:key="index">
+                <view class="content _div data-v-98411b28">
+                    <image class="curriculumImg _img data-v-98411b28" src="{{item[$orig].coverUrl}}" wx:if="{{item[$orig].coverUrl}}"></image>
+                    <image class="curriculumImg _img data-v-98411b28" src="{{item.m8}}" wx:else></image>
+                    <view class="curriculumText txt1 _div data-v-98411b28">
+                        <view class="txt1 _div data-v-98411b28">{{item[$orig].name}}</view>
+                        <view class="txt2 _div data-v-98411b28" wx:if="{{item[$orig].isDir==1}}">{{item[$orig].childCount+'套题库'}}</view>
+                    </view>
+                    <image class="icon_next _img data-v-98411b28" src="{{item.m9}}"></image>
+                </view>
+                <image class="icon_img _img data-v-98411b28" src="{{item.m10}}" wx:if="{{item[$orig].freeScope==0||item[$orig].freeScope==1}}"></image>
+                <block wx:else>
+                    <image class="icon_img _img data-v-98411b28" src="{{item.m11}}" wx:if="{{item[$orig].freeScope==2}}"></image>
+                </block>
+            </view>
+        </view>
+        <view class="no_data data-v-98411b28" wx:if="{{noDataShow}}">
+            <image class="_img data-v-98411b28" mode="widthFix" src="{{$root.m12}}"></image>
+        </view>
+    </view>
+    <fixed-box bind:__l="__l" class="data-v-98411b28" vueId="6fe147cc-1"></fixed-box>
+</view>

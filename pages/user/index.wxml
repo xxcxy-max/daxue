@@ -1,0 +1,107 @@
+<view class="bgMine data-v-137d5072" hidden="{{!userinfo}}">
+    <view bindtap="__e" class="mineFlex data-v-137d5072" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/user/perfect'] ] ] ] ]}}">
+        <image class="imgInfo data-v-137d5072" mode="aspectFill" src="{{userinfo.userPicture&&userinfo.userPicture!='0'?userinfo.userPicture:$root.m0}}"></image>
+        <view class="mainMine data-v-137d5072" wx:if="{{token}}">
+            <view class="titMine data-v-137d5072">{{userinfo.nickName||'用户'+userinfo.userId}}</view>
+            <view class="qq_money data-v-137d5072">
+                <text class="data-v-137d5072">{{userinfo.payPoints+'企鹅币'}}</text>
+            </view>
+        </view>
+        <view class="mainMine login-txt data-v-137d5072" wx:else>请先登录</view>
+        <view class="icon icon21 data-v-137d5072"></view>
+    </view>
+    <view class="info data-v-137d5072">
+        <view class="vip-view data-v-137d5072">
+            <view bindtap="__e" class="{{['vip-bg','data-v-137d5072',userinfo.viptp==1?'isvip2':'',userinfo.viptp==2||userinfo.viptp==3?'isvip3':'',userinfo.viptp==0?'isvip1':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'IsVipToPage',['$0'],['userinfo.viptp'] ] ] ] ]}}">
+                <view class="vip-txt data-v-137d5072" wx:if="{{userinfo.viptp!=0}}">{{'央国企求职学习'+$root.m1+''}}<view class="{{['icon','data-v-137d5072',userinfo.viptp==1?'icon25':'',userinfo.viptp==2||userinfo.viptp==3?'icon26':'']}}"></view>
+                </view>
+                <view class="vip-txt not-vip data-v-137d5072" wx:else>开通会员<view class="icon icon21 data-v-137d5072"></view>
+                </view>
+                <view class="data-v-137d5072" wx:if="{{userinfo.viptp!=0}}">{{'有效期至：'+userinfo.formatEdate}}</view>
+                <view class="data-v-137d5072" wx:else>享会员专属特权<label class="_span data-v-137d5072">{{'(剩余'+(userinfo.rankPoints||0)}}<label class="_span data-v-137d5072">次</label>)</label>
+                </view>
+            </view>
+        </view>
+        <view class="navList-x data-v-137d5072">
+            <view bindtap="__e" class="nav-item data-v-137d5072" data-event-opts="{{[ [ 'tap',[ [ 'isNavToPage',['$0'],[ [ ['navListX','',index,'path'] ] ] ] ] ] ]}}" wx:if="{{item[$orig].show}}" wx:for="{{$root.l0}}" wx:key="index">
+                <image class="nav-image data-v-137d5072" mode="aspectFill" src="{{item.m2}}"></image>
+                <view class="data-v-137d5072">{{item[$orig].name}}</view>
+            </view>
+        </view>
+        <view class="bgProperty mb24 data-v-137d5072" wx:if="{{!isFx&&userinfo.isJoin==1}}">
+            <view class="propertyFlex data-v-137d5072">
+                <view class="property-title data-v-137d5072">我的资产</view>
+                <view bindtap="__e" class="data-v-137d5072" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/profit/index'] ] ] ] ]}}">查看详情</view>
+                <view class="icon icon21 data-v-137d5072"></view>
+            </view>
+            <view class="tabProperty data-v-137d5072">
+                <view bindtap="__e" class="tabProperty-item data-v-137d5072" data-event-opts="{{[ [ 'tap',[ [ 'e0',['$event'] ] ] ] ]}}" data-event-params="{{({index:index})}}" wx:for="{{tabPropertyList}}" wx:key="index">
+                    <view class="{{['data-v-137d5072',index==stype?'act':'']}}">{{item}}</view>
+                    <image class="img data-v-137d5072" mode="widthFix" src="https://oss.cntjhr.com/image/icon23.png" wx:if="{{index==stype}}"></image>
+                </view>
+            </view>
+            <view class="propertyBoxFlex_list active data-v-137d5072">
+                <view class="propertyBoxFlex data-v-137d5072">
+                    <view class="propertyList data-v-137d5072">
+                        <view class="property-info-title data-v-137d5072">销售额（￥）</view>
+                        <view class="c_f4523c f20 data-v-137d5072">{{''+(stype==0?userinfo.totalOpeningFee||0:userinfo.monthOpeningFee||0)+''}}</view>
+                    </view>
+                    <view class="propertyList data-v-137d5072">
+                        <view class="property-info-title data-v-137d5072">收益（￥）</view>
+                        <view class="c_2c8cfe f20 data-v-137d5072">{{(stype==0?userinfo.totalIncome||0:userinfo.monthIncome||0)+''}}</view>
+                    </view>
+                </view>
+                <view class="propertyBoxFlex data-v-137d5072" style="margin-bottom:0;">
+                    <view class="propertyList data-v-137d5072">
+                        <view class="property-info-title data-v-137d5072">学员量（人）</view>
+                        <view class="f20 data-v-137d5072">{{stype==0?userinfo.numRows||0:userinfo.numRowsMonth||0}}</view>
+                    </view>
+                    <view class="propertyList data-v-137d5072">
+                        <view class="property-info-title data-v-137d5072">购买量（张）</view>
+                        <view class="f20 data-v-137d5072">{{(stype==0?userinfo.openNumRows||0:userinfo.openNumRowsMonth||0)+''}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="poster_recommend data-v-137d5072" wx:if="{{!isFx&&userinfo.isJoin==0}}">
+            <image bindtap="__e" class="imgs data-v-137d5072" data-event-opts="{{[ [ 'tap',[ [ 'goRecommend',['$event'] ] ] ] ]}}" mode="widthFix" src="{{$root.m3}}" wx:if="{{userinfo.viptp==0}}"></image>
+            <block wx:else>
+                <image bindtap="__e" class="imgs data-v-137d5072" data-event-opts="{{[ [ 'tap',[ [ 'goRecommend',['$event'] ] ] ] ]}}" mode="widthFix" src="{{$root.m4}}" wx:if="{{userinfo.viptp==1||userinfo.viptp==2}}"></image>
+            </block>
+        </view>
+        <view class="mylinkBox data-v-137d5072">
+            <view bindtap="__e" class="mylinkFlex data-v-137d5072" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/order/index'] ] ] ] ]}}">
+                <view class="mylink mylink2 data-v-137d5072">我的订单</view>
+                <view class="icon24 data-v-137d5072"></view>
+            </view>
+            <view bindtap="__e" class="mylinkFlex data-v-137d5072" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pages/ag/qrcode'] ] ] ] ]}}" wx:if="{{isFx}}">
+                <view class="mylink mylink3 data-v-137d5072">小程序码</view>
+                <view class="icon24 data-v-137d5072"></view>
+            </view>
+            <view bindtap="__e" class="mylinkFlex data-v-137d5072" data-event-opts="{{[ [ 'tap',[ [ 'toPage',['/pagesA/pages/user/change_passwd'] ] ] ] ]}}">
+                <view class="mylink mylink1 data-v-137d5072">设置密码</view>
+                <view class="icon24 data-v-137d5072"></view>
+            </view>
+            <view bindtap="__e" class="mylinkFlex data-v-137d5072" data-event-opts="{{[ [ 'tap',[ ['loginOut'] ] ] ]}}" wx:if="{{token}}">
+                <view class="mylink mylink4 data-v-137d5072">退出登录</view>
+                <view class="icon24 data-v-137d5072"></view>
+            </view>
+        </view>
+    </view>
+    <view class="maskDialog data-v-137d5072" wx:if="{{group_chats_show}}">
+        <view class="maskBg data-v-137d5072">
+            <image class="maskBgImg _img data-v-137d5072" src="{{$root.m5}}"></image>
+            <view class="infoBox data-v-137d5072">
+                <view class="img data-v-137d5072">
+                    <image class="QRimg _img data-v-137d5072" showMenuByLongpress="true" src="{{$root.m6}}"></image>
+                </view>
+                <view class="txt1 data-v-137d5072">大学生求职神器用户服务群</view>
+                <view class="txt2 data-v-137d5072">长按识别二维码或扫码加群</view>
+            </view>
+            <view bindtap="__e" class="closeBox data-v-137d5072" data-event-opts="{{[ [ 'tap',[ [ 'closeDialog',['$event'] ] ] ] ]}}">
+                <image class="closeImg _img data-v-137d5072" src="{{$root.m7}}"></image>
+            </view>
+        </view>
+    </view>
+    <fixed-box bind:__l="__l" class="data-v-137d5072" vueId="5c2bbbc2-1"></fixed-box>
+</view>
